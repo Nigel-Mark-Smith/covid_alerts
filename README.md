@@ -1,6 +1,6 @@
 # covid_alerts
 
-This repository delivers utility scripts covid_alerts, general_alerts.py and trust_deaths.py which support
+This repository delivers utility scripts covid_alerts.bat, general_alerts.py and trust_deaths.py which support
 the processing of publicly available COVID-19 data to raise alerts to the user relating to negative trends
 in this data. The data is either retrieved through the COVID-19 API or from an Excel spreadsheet available
 on an NHS web site. The python utilities have configuration files which allow the criteria under which alerts
