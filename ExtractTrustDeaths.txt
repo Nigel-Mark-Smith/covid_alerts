@@ -1,0 +1,19 @@
+Sub ExtractTrustDeaths()
+'
+' ExtractTrustDeaths Macro
+' Extracts deaths per trust from NHS Excel spreadsheet
+'
+' Keyboard Shortcut: Ctrl+d
+'
+    ActiveWindow.ScrollWorkbookTabs Sheets:=1
+    ActiveWindow.ScrollWorkbookTabs Sheets:=1
+    Sheets("Tab4 Deaths by trust").Select
+    Rows("1:15").Select
+    Selection.Delete Shift:=xlUp
+    Rows("3:3").Select
+    Selection.Delete Shift:=xlUp
+    ChDir "C:\temp"
+    ActiveWorkbook.SaveAs Filename:="C:\temp\trust_deaths.csv", _
+        FileFormat:=xlCSVMSDOS, CreateBackup:=False
+    ActiveWorkbook.Close
+ End Sub
