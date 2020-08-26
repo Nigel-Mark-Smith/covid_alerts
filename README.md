@@ -4,7 +4,7 @@ This repository delivers utility scripts covid_alerts.bat, general_alerts.py and
 the processing of publicly available COVID-19 data to raise alerts to the user relating to negative trends
 in this data. The data is either retrieved through the COVID-19 API or from an Excel spreadsheet available
 on an NHS web site. The python utilities have configuration files which allow the criteria under which alerts
-are raised to be changed to increase or decrease 'sensitivity'. It is envisaged that script covid_alerts should
+are raised to be changed to increase or decrease 'sensitivity'. It is envisaged that script covid_alerts.bat should
 be run daily to assist any user in being 'alert' to current COVID-19 trends.  As perparation for running this script
 the user should add the names of any LTLA ( Local Tier Local Authority ) they wish to monitor in the 
 ../config/general_alerts.csv configuration file and any NHS trust they wish to monitor to configuration file
