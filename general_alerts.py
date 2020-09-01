@@ -379,11 +379,6 @@ if ( Utils.Close(ConfigurationFileObject,failure) == failure ) : Utils.Logerror(
 ErrorMessage = 'Processing overview data'
 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
 
-# Determine latest testing data available
-date_lines = RetreiveCOVIDData(overview_filter,overview_structure,latest_field="cumPillarOneTestsByPublishDate")
-date_line = date_lines[0].split(',')
-latest_test_date = date_line[overview_field_positions['Date']]
-
 # Retrieve overview data
 data_lines = RetreiveCOVIDData(overview_filter,overview_structure)
 
@@ -413,7 +408,12 @@ if ( LastRollingDeaths > RollingDeathsLimit ) :
     ErrorMessage = 'The number of rolling deaths on %s was %i which is greater than %i' % (LastSampleDate,LastRollingDeaths,RollingDeathsLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
-# Remove data lines with no PillarOneTests or PillarTwoTests test values.
+# Determine latest testing data available
+date_lines = RetreiveCOVIDData(overview_filter,overview_structure,latest_field="cumPillarOneTestsByPublishDate")
+date_line = date_lines[0].split(',')
+latest_test_date = date_line[overview_field_positions['Date']]
+    
+# Remove previously retreived data lines with no PillarOneTests or PillarTwoTests test values.
 sample_no = 0
 for data_line in data_lines :
     data_list = data_line.split(',')
