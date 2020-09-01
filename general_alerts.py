@@ -129,15 +129,21 @@ def GenerateLTLAFilters(list) :
 # This process will retrieve the data for 'data_filter' 
 # using format 'data_structure'. The process retrieves the
 # data in csv format and then splits the data into individual
-# lines.
-def RetreiveCOVIDData(data_filter,data_structure) :
+# lines. It is possible to specify a latest_by field value 'field'
+# if a date for the latest available data of this type is required.
+def RetreiveCOVIDData(data_filter,data_structure,latest_field='') :
 
     "This process will retrieve the data for 'data_filter' into using 'data_structure'"
     
     lines = []
     
-    api = Cov19API(filters=data_filter, structure=data_structure)
+    # Need latest to get date for most current testing data
+    if ( len(latest_field) == 0 ) :
+        api = Cov19API(filters=data_filter,structure=data_structure)
+    else:
+        api = Cov19API(filters=data_filter,structure=data_structure,latest_by = latest_field)
     
+    # Retreive data
     try:
         data = api.get_csv()
         lines = data.splitlines()
@@ -373,6 +379,11 @@ if ( Utils.Close(ConfigurationFileObject,failure) == failure ) : Utils.Logerror(
 ErrorMessage = 'Processing overview data'
 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
 
+# Determine latest testing data available
+date_lines = RetreiveCOVIDData(overview_filter,overview_structure,latest_field="cumPillarOneTestsByPublishDate")
+date_line = date_lines[0].split(',')
+latest_test_date = date_line[overview_field_positions['Date']]
+
 # Retrieve overview data
 data_lines = RetreiveCOVIDData(overview_filter,overview_structure)
 
@@ -391,25 +402,6 @@ if ( LastRollingCases > RollingCasesLimit ) :
    ErrorMessage = 'The number of rolling cases for the UK on %s was %i which is greater the %i' % (LastSampleDate,LastRollingCases,RollingCasesLimit)
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
-# Raise any rolling positive rate alarm(s) required
-TestDataAvailable = data_lists[len(data_lists)-1][overview_field_positions['PillarOneTests']]
-if ( (len(TestDataAvailable)) != 0 ) :
-
-    RollingPositiveRates = ReturnRollingPositiveRates(data_lists,overview_field_positions['Cases'],overview_field_positions['PillarOneTests'],overview_field_positions['PillarTwoTests'])
-    RollingPositiveRateIncrease = ( RollingPositiveRates[1] - RollingPositiveRates[0] )
-    if ( RollingPositiveRateIncrease > RollingPositiveRateIncreaseLimit ) :
-        ErrorMessage = 'The increase in rolling positive test rate on %s is %s which is greater than %s' % (LastSampleDate,RollingPositiveRateIncrease,RollingPositiveRateIncreaseLimit)
-        Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
-    
-    LastRollingPositiveRate = RollingPositiveRates[1]
-    if ( LastRollingPositiveRate > RollingPositiveRateLimit ) :
-        ErrorMessage = 'The rolling positive test rate on %s is %s which is greater than %s ' % (LastSampleDate,LastRollingPositiveRate,RollingPositiveRateLimit)
-        Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
-   
-else:
-    ErrorMessage = 'Up-to-date testing data is only available on Thursdays' 
-    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
-
 # Raise any rolling death alarm(s) required
 RollingDeathsIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Deaths'])
 if ( RollingDeathsIncrease > RollingDeathsIncreaseLimit ) :  
@@ -420,7 +412,33 @@ LastRollingDeaths = ReturnLastRollingValue(data_lists,overview_field_positions['
 if ( LastRollingDeaths > RollingDeathsLimit ) :  
     ErrorMessage = 'The number of rolling deaths on %s was %i which is greater than %i' % (LastSampleDate,LastRollingDeaths,RollingDeathsLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
- 
+    
+# Remove data lines with no PillarOneTests or PillarTwoTests test values.
+sample_no = 0
+for data_line in data_lines :
+    data_list = data_line.split(',')
+    sample_date = data_list[overview_field_positions['Date']]
+    if ( sample_date == latest_test_date ) : break
+    sample_no += 1
+
+del data_lines[0:sample_no]
+        
+# Extract data required to calculate rolling values
+data_lists = ReturnRollingSourceData(data_lines,Rolling)
+LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]    
+  
+# Raise any rolling positive rate alarm(s) required
+RollingPositiveRates = ReturnRollingPositiveRates(data_lists,overview_field_positions['Cases'],overview_field_positions['PillarOneTests'],overview_field_positions['PillarTwoTests'])
+RollingPositiveRateIncrease = ( RollingPositiveRates[1] - RollingPositiveRates[0] )
+if ( RollingPositiveRateIncrease > RollingPositiveRateIncreaseLimit ) :
+    ErrorMessage = 'The increase in rolling positive test rate on %s is %s which is greater than %s' % (LastSampleDate,RollingPositiveRateIncrease,RollingPositiveRateIncreaseLimit)
+    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+    
+LastRollingPositiveRate = RollingPositiveRates[1]
+if ( LastRollingPositiveRate > RollingPositiveRateLimit ) :
+    ErrorMessage = 'The rolling positive test rate on %s is %s which is greater than %s ' % (LastSampleDate,LastRollingPositiveRate,RollingPositiveRateLimit)
+    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)  
+     
 # Log progress messages
 ErrorMessage = 'Processing ltla data'
 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
