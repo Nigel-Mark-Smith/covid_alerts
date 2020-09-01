@@ -62,7 +62,7 @@
 #
 # The delivered configuration file has the following settings:
 #
-#   7,100,500,0,100,0.02,0.6,3,3
+#   7,500,3500,0,10,0.02,0.6,3,3
 #
 # Logging
 # -------
@@ -389,23 +389,27 @@ LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
 # Raise any rolling cases alarm(s) required
 RollingCasesIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Cases'])
 if ( RollingCasesIncrease > RollingCasesIncreaseLimit ) : 
-    ErrorMessage = 'The number of rolling cases for the UK on %s increased by %i which is greater than %i' % (LastSampleDate,RollingCasesIncrease,RollingCasesIncreaseLimit) 
+    ErrorMessage = 'The rolling number of cases for the UK on %s increased by %i which is greater than %i' % (LastSampleDate,RollingCasesIncrease,RollingCasesIncreaseLimit) 
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingCases = ReturnLastRollingValue(data_lists,overview_field_positions['Cases'])
 if ( LastRollingCases > RollingCasesLimit ) : 
-   ErrorMessage = 'The number of rolling cases for the UK on %s was %i which is greater the %i' % (LastSampleDate,LastRollingCases,RollingCasesLimit)
+   ErrorMessage = 'The rolling number of cases for the UK on %s was %i which is greater the %i' % (LastSampleDate,LastRollingCases,RollingCasesLimit)
+   Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+   ErrorMessage = 'The average daily case rate in the UK on %s was %i ' % (LastSampleDate,(LastRollingCases/Rolling))
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
 # Raise any rolling death alarm(s) required
 RollingDeathsIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Deaths'])
 if ( RollingDeathsIncrease > RollingDeathsIncreaseLimit ) :  
-    ErrorMessage = 'The number of rolling deaths on %s increased by %i which is greater than %i' % (LastSampleDate,RollingDeathsIncrease,RollingDeathsIncreaseLimit)
+    ErrorMessage = 'The rolling number of deaths on %s increased by %i which is greater than %i' % (LastSampleDate,RollingDeathsIncrease,RollingDeathsIncreaseLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
 LastRollingDeaths = ReturnLastRollingValue(data_lists,overview_field_positions['Deaths'])
 if ( LastRollingDeaths > RollingDeathsLimit ) :  
-    ErrorMessage = 'The number of rolling deaths on %s was %i which is greater than %i' % (LastSampleDate,LastRollingDeaths,RollingDeathsLimit)
+    ErrorMessage = 'The rolling number of deaths on %s was %i which is greater than %i' % (LastSampleDate,LastRollingDeaths,RollingDeathsLimit)
+    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+    ErrorMessage = 'The average daily death rate on %s was %i ' % (LastSampleDate,(LastRollingDeaths/Rolling))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 # Determine latest testing data available
@@ -431,14 +435,14 @@ LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
 RollingPositiveRates = ReturnRollingPositiveRates(data_lists,overview_field_positions['Cases'],overview_field_positions['PillarOneTests'],overview_field_positions['PillarTwoTests'])
 RollingPositiveRateIncrease = ( RollingPositiveRates[1] - RollingPositiveRates[0] )
 if ( RollingPositiveRateIncrease > RollingPositiveRateIncreaseLimit ) :
-    ErrorMessage = 'The increase in rolling positive test rate on %s is %s which is greater than %s' % (LastSampleDate,RollingPositiveRateIncrease,RollingPositiveRateIncreaseLimit)
+    ErrorMessage = 'The increase in rolling positive test rate on %s was %s which is greater than %s' % (LastSampleDate,RollingPositiveRateIncrease,RollingPositiveRateIncreaseLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingPositiveRate = RollingPositiveRates[1]
 if ( LastRollingPositiveRate > RollingPositiveRateLimit ) :
-    ErrorMessage = 'The rolling positive test rate on %s is %s which is greater than %s ' % (LastSampleDate,LastRollingPositiveRate,RollingPositiveRateLimit)
+    ErrorMessage = 'The rolling positive test rate on %s was %s which is greater than %s ' % (LastSampleDate,LastRollingPositiveRate,RollingPositiveRateLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)  
-     
+         
 # Log progress messages
 ErrorMessage = 'Processing ltla data'
 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
@@ -459,16 +463,16 @@ for area_filter in area_filters :
     # Raise any rolling cases alarm(s) required
     RollingCasesIncrease = ReturnRollingDifference(data_lists,area_field_positions['Cases'])
     if ( RollingCasesIncrease > LTLARollingCasesIncreaseLimit ) : 
-        ErrorMessage = 'The number of rolling cases for %s on %s increased by %i which is greater than %i' % (AreaName,LastSampleDate,RollingCasesIncrease,LTLARollingCasesIncreaseLimit) 
+        ErrorMessage = 'The rolling number of cases for %s on %s increased by %i which is greater than %i' % (AreaName,LastSampleDate,RollingCasesIncrease,LTLARollingCasesIncreaseLimit) 
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
     LastRollingCases = ReturnLastRollingValue(data_lists,area_field_positions['Cases'])
     if ( LastRollingCases > LTLARollingCasesLimit ) : 
-        ErrorMessage = 'The number of rolling cases for %s on %s was %i which is greater the %i' % (AreaName,LastSampleDate,LastRollingCases,LTLARollingCasesLimit)
+        ErrorMessage = 'The rolling number of cases for %s on %s was %i which is greater the %i' % (AreaName,LastSampleDate,LastRollingCases,LTLARollingCasesLimit)
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
         
     if ( LastRollingCases == 0 ) : 
-        ErrorMessage = 'The number of rolling cases for %s on %s was 0' % (AreaName,LastSampleDate)
+        ErrorMessage = 'The rolling number of cases for %s on %s was 0' % (AreaName,LastSampleDate)
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
     
     area_number += 1
