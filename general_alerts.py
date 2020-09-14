@@ -435,12 +435,12 @@ LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
 RollingPositiveRates = ReturnRollingPositiveRates(data_lists,overview_field_positions['Cases'],overview_field_positions['PillarOneTests'],overview_field_positions['PillarTwoTests'])
 RollingPositiveRateIncrease = ( RollingPositiveRates[1] - RollingPositiveRates[0] )
 if ( RollingPositiveRateIncrease > RollingPositiveRateIncreaseLimit ) :
-    ErrorMessage = 'The increase in rolling positive test rate on %s was %s which is greater than %s' % (LastSampleDate,RollingPositiveRateIncrease,RollingPositiveRateIncreaseLimit)
+    ErrorMessage = 'The increase in rolling positive test rate on %s was %4.2f which is greater than %4.2f' % (LastSampleDate,float(RollingPositiveRateIncrease),float(RollingPositiveRateIncreaseLimit))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingPositiveRate = RollingPositiveRates[1]
 if ( LastRollingPositiveRate > RollingPositiveRateLimit ) :
-    ErrorMessage = 'The rolling positive test rate on %s was %s which is greater than %s ' % (LastSampleDate,LastRollingPositiveRate,RollingPositiveRateLimit)
+    ErrorMessage = 'The rolling positive test rate on %s was %4.2f which is greater than %4.2f ' % (LastSampleDate,float(LastRollingPositiveRate),float(RollingPositiveRateLimit))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)  
          
 # Log progress messages
