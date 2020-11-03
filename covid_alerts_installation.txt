@@ -36,11 +36,6 @@ pip install uk-covid19
 Microsoft Excel can be downloaded for the relevant Microsoft web site for
 a fee. Once installed the following additional steps must be performed.
 
-a. Create link to Excel Macro file (In admin powershell session )
-
-cd C:\Users\nigel\Documents 
-New-Item -ItemType HardLink -Name PERSONAL.XLSB  -Target C:\Users\nigel\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB
-
 b. Store the ExtractTrustDeaths macro ( in Excel )
 
 Open any spreadsheet
@@ -62,6 +57,15 @@ In remaining spreadsheet window Click 'File' then 'Save'
 c. In admin cmd session create c:\temp
 
 mkdir c:\temp
+
+d. Copy PERSONAL.XLSB as follows:
+
+cd C:\Users\nigel\Documents
+erase /f /s PERSONAL.XLSB
+copy C:\Users\nigel\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB
+
+
+
 
 Notes:
 ------

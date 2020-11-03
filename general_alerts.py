@@ -237,6 +237,25 @@ def ReturnRollingPositiveRates(lists,cases,test1,test2) :
     
     return [penultimate_rate,last_rate]
     
+# This procedure will return any 'by published date data' that is more recent than any   
+# 'by specimen date' data. 
+def ReturnLatestPublishedByData(byspecimen,bypublished) :
+
+    "This procedure will return any 'by published date' data that is more recent than any 'by specimen date' data"
+    latestdata = ''
+    
+    byspecimendata = byspecimen.split(',')
+    bypublisheddata = bypublished.split(',')
+        
+    if ( bypublisheddata[0] != byspecimendata[0] ) :
+        latestdate = bypublisheddata[0]
+        newcases = bypublisheddata[1]
+        cumulative = byspecimendata[1]
+        latestcases = str(int(cumulative) + int(newcases))
+        latestdata = latestdate + ',' + latestcases
+  
+    return latestdata
+    
 ############
 ### MAIN ###
 ############
@@ -288,6 +307,12 @@ overview_structure = {
 
 # Generate field position information
 overview_field_positions = ReturnFieldPostions(overview_structure)
+
+# Define latest area cases structure
+area_latest_structure = {
+    "Date":"date",
+    "Cases":"newCasesByPublishDate",
+}
 
 # Define area structure    
 area_structure = {
@@ -454,6 +479,14 @@ for area_filter in area_filters :
 
     # Retrieve area data 
     data_lines = RetreiveCOVIDData(area_filter,area_structure)
+    
+    # Retrieve latest 'by published date' data
+    latest_data_lines = RetreiveCOVIDData(area_filter,area_latest_structure,latest_field='newCasesByPublishDate')
+        
+    # Add latest 'by published date' data if newer than 'by specimen date' data
+    latest_data = ReturnLatestPublishedByData(data_lines[0],latest_data_lines[len(latest_data_lines)-1])
+    if ( len(latest_data) != 0 ) :
+        data_lines.insert(0,latest_data)
             
     # Extract data required to calculate rolling values
     data_lists = ReturnRollingSourceData(data_lines,Rolling)

@@ -227,7 +227,7 @@ ConversionWait = 4
 
 # Web page constants
 WebPage = 'https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/'
-FileNamePattern = 'https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/\d{4}/\d{2}/COVID-19-total-announced-deaths-\d*-.*-\d{4}.xlsx'
+FileNamePattern = 'https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/\d{4}/\d{2}/COVID-19-total-announced-deaths-\d*-.*-\d{4}.*.xlsx'
 
 # Create/open log file
 ErrorFileObject = Utils.Open(ErrorFilename,append,failure)
