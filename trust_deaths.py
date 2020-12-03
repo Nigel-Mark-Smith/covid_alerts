@@ -159,6 +159,24 @@ def FindLastDeath(list) :
         
     return result
     
+# This procedure will find the index of the list on which the value
+# is the highest
+def FindHighestDeaths(list) :
+ 
+    "This procedure will find the date on which the highest number of deaths were recorded"
+  
+    toll = 0
+    index = 0
+    
+    for item in list:
+        value = int(item)
+        if ( value > toll ) : 
+            toll = value
+            result = index
+        index += 1
+        
+    return result
+    
 # This procedure returns a date object from a 'specimendate'.
 # The dictionary 'conversion' is used to convert month strings
 # to month numbers
@@ -353,13 +371,11 @@ for CSVFileDataList in CSVFileDataLists :
         if ( TrustName.startswith(Trust) ) :
             DataLine = TrustName
             DailyList = CSVFileDataList[6:(len(CSVFileDataList) - 18)]
-            # DataLine = DataLine + ',' + GenerateCSVRow(DailyList)
-            # Display total lines.
             DataLine = DataLine + ',' + GenerateCSVRow(CSVFileDataList[6:(len(CSVFileDataList) - 14)])
             DataLine = DataLine + '\n'
             Utils.Writeline(DeathsFileObject,DataLine,failure)
             
-            # Generate warning messages
+            # Generate last death warning messages.
             DateLastDeath = SpecimenDates[FindLastDeath(DailyList)]
             DaysLapsed = DateToday - DateLastDeath
             if ( DaysLapsed.days  <= 7 ) :
@@ -368,6 +384,18 @@ for CSVFileDataList in CSVFileDataLists :
                 AttentionFlag = True
             else:
                 ErrorMessage = 'The last death in %s was on %s' % (Trust,str(DateLastDeath))
+                Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
+                
+            # Generate highest deaths warning messages.    
+            HighestDeathsIndex = FindHighestDeaths(DailyList)
+            DateHighestDeaths = SpecimenDates[HighestDeathsIndex]
+            DaysLapsed = DateToday - DateHighestDeaths
+            if ( DaysLapsed.days  <= 7 )  :
+                ErrorMessage = 'The highest number of deaths in %s was %s recorded on %s which is a week or less ago' % (Trust,str(DailyList[HighestDeathsIndex]),str(DateHighestDeaths))
+                Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+                AttentionFlag = True
+            else: 
+                ErrorMessage = 'The highest number of deaths in %s was %s recorded on %s' % (Trust,str(DailyList[HighestDeathsIndex]),str(DateHighestDeaths))
                 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
             
 # Processes attention flags.
