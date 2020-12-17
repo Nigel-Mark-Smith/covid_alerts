@@ -1,7 +1,7 @@
 covid alerts Installation 
 ==============================
 This document details the procedure required to install the 
-Python utility scripts delivered in 'covid_alerts'. The 
+Python utility script delivered in 'covid_alerts'. The 
 procedure consists of the following two main sub-sections.
 
 a. Installation of third party software.
@@ -9,22 +9,18 @@ b. Installation of 'covid_alerts' contents from GitHub
 
 1. Installation of third party software
 -------------------------------
-The utility scripts delivered in 'covid_alerts' require the following
+The utility script delivered in 'covid_alerts' requires the following
 3rd party software:
 
 a. ActivePython ( version Python 3.7.4 or above )
 b. Python module uk-covid19
-c. Google Chrome ( Version 80.0.3987.163 (Official Build) (64-bit) ) 
-d. Mircrosoft Excel
 
-Python and Chrome can be downloaded and installed from the following links.
+Python can be downloaded and installed from the following links.
 
 Software          | Link 
 ------------------+---------------------------------------------------------
 ActivePython      | https://www.activestate.com/products/python/downloads/
                   | + https://platform.activestate.com/sign-in
-------------------+---------------------------------------------------------
-Google Chrome     | https://www.google.com/chrome/
 ------------------+---------------------------------------------------------
 
 Once Python is installed the Python module uk-covid19 can be installed using:
@@ -33,47 +29,12 @@ a. Install Module uk-covid19 ( in admin cmd )
 
 pip install uk-covid19
 
-Microsoft Excel can be downloaded for the relevant Microsoft web site for
-a fee. Once installed the following additional steps must be performed.
-
-b. Store the ExtractTrustDeaths macro ( in Excel )
-
-Open any spreadsheet
-Select tab 'View'
-Click 'Unhide'
-Click 'OK' to 'Unhide workbook:' 'PERSONAL.XLSB'
-Select tab 'View' in PESONAL.XLSB workbook
-Select 'View macros' from 'Macros' drop down.
-Enter 'ExtractTrustDeath' in 'Macro name:' field
-Click 'Create'  ( Which will start up Virtual BAsic )
-Clear all text in 'Module <n>' window
-Copy and paste text in file 'ExtractTrustDeaths.txt' into  'Module <n>' window
-Ctrl + S
-Alt + Q
-Select tab 'View' in PESONAL.XLSB workbook
-Click 'hide'
-In remaining spreadsheet window Click 'File' then 'Save'
-
-c. In admin cmd session create c:\temp
-
-mkdir c:\temp
-
-d. Copy PERSONAL.XLSB as follows:
-
-cd C:\Users\nigel\Documents
-erase /f /s PERSONAL.XLSB
-copy C:\Users\nigel\AppData\Roaming\Microsoft\Excel\XLSTART\PERSONAL.XLSB
-
-
-
-
 Notes:
 ------
 
 Please note the following:
 
 - To install ActivePython you must set up an ActiveState login.
-
 
 2. Installation of 'process_vacancies' contents from GitHub
 -----------------------------------------------------------

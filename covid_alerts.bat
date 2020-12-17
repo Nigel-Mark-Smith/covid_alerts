@@ -1,8 +1,5 @@
 @echo off
-rem This batch file executes two scripts which will
-rem inform the user of any concerns relating to the 
-rem latest available COVID-19 data.
-erase data\*.csv
-erase data\*.xlsx
+rem This batch file executes script general_alerts.py 
+rem which will inform the user of any concerns relating 
+rem to the latest available COVID-19 data.
 general_alerts.py
-trust_deaths.py

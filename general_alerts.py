@@ -38,31 +38,34 @@
 # - Line two contains the value of parameters used by the script.
 #   The format of the line is as follows:
 #
-# <Rollinng Period>,<Rolling Cases Increase Limit>,<Rolling Cases Limit>, \
-# <Rolling Deaths Increase Limit>,<Rolling Deaths Limit>, \
-# <Rolling Positive Rate Increase Limit>,<Rolling Positive Rate Limit>, \ 
-# <LTLA Rolling Cases Increase Limit>,<LTLA Rolling Cases Limit>
-#
+# <Rolling Period>,<Rolling UK Cases Increase Limit>,<Rolling UK Cases Limit>, \
+# <Rolling UK Deaths Increase Limit>,<Rolling UK Deaths Limit>, \
+# <Rolling UK Positive Rate Increase Limit>,<Rolling UK Positive Rate Limit>, \ 
+# <LTLA Rolling Cases Increase Limit>,<LTLA Rolling Cases Limit> \
+# <LTLA Rolling Deaths Increase Limit>,<LTLA Rolling Deaths Limit>
+# 
 # Where
 #
 # - Rolling Period is the length of the rolling period in days.
 # - Increase in rolling UK cases above which an alert is raised
 # - Rolling UK cases above which an alert is raised.
-# - Increase in the rolling death rate above which an alert is given
-# - Rolling death rate above which an alert is raised
+# - Increase in the UK rolling death rate above which an alert is given
+# - Rolling UK death rate above which an alert is raised
 # - Increase in rolling percentage of positive tests above which an alert is raised
 # - Rolling percentage of positive tests above which an alert is raised.
 # - Increase in rolling LTLA cases above which an alert is raised
 # - Rolling LTLA cases above which an alert is raised.
+# - Increase in rolling LTLA deaths above which an alert is raised
+# - Rolling LTLA deaths above which an alert is raised.
 # 
-# Parameters specified for rates/rate increases of deaths and postive test
-# percentages are applied to UK data ( areaType = overview ) only whilst 
-# separate UK and LTLA parameters are specified for case rate/rate increases.
-# The same rolling period is used when analysing UK and ltla data.
+# Separate UK and LTLA parameters are specified for case rate and
+# death rate increases. The same rolling period is used when analysing 
+# UK and ltla data. Parameters specified for postive test percentages are 
+# applied to UK data ( areaType = overview ) only. 
 #
 # The delivered configuration file has the following settings:
 #
-#   7,500,3500,0,10,0.02,0.6,3,3
+#   7,500,3500,0,10,0.02,0.6,3,3,0,0
 #
 # Logging
 # -------
@@ -266,7 +269,6 @@ LogDir = Currentdir + '\\log'
 ErrorFilename = LogDir + '\\' + 'log.txt'
 ConfigDir = Currentdir + '\\config'
 ConfigurationFilename = ConfigDir + '\\' + 'general_alerts.csv'
-DataDir = Currentdir + '\\data'
 append = 'a'
 read = 'r'
 overwrite = 'w'
@@ -288,7 +290,7 @@ module = 'general_alerts.py'
 # Configuration file parameters
 ConfigFileLength = 2
 MinAreas = 1
-NoOfparameters = 9
+NoOfparameters = 11
 comma = ','
 space = ' '
 
@@ -320,8 +322,21 @@ area_structure = {
     "Cases":"cumCasesBySpecimenDate"
 }
 
+# Define latest area deaths structure
+death_latest_structure = {
+    "Date": "date",
+    "Cases":"newDeaths28DaysByPublishDate"
+}
+
+# Define death structure
+death_structure = {
+    "Date": "date",
+    "Cases":"cumDeaths28DaysByPublishDate"
+}
+
 # Generate field position information
 area_field_positions = ReturnFieldPostions(area_structure)
+death_field_positions = ReturnFieldPostions(death_structure)
 
 # Create/open log file
 ErrorFileObject = Utils.Open(ErrorFilename,append,failure)
@@ -395,6 +410,8 @@ RollingPositiveRateIncreaseLimit = float(parameters[5])
 RollingPositiveRateLimit = float(parameters[6])
 LTLARollingCasesIncreaseLimit = int(parameters[7])
 LTLARollingCasesLimit = int(parameters[8])
+LTLARollingDeathsIncreaseLimit = int(parameters[9])
+LTLARollingDeathsLimit = int(parameters[10])
     
 # Close Configuration file
 ErrorMessage = 'Could not close ' + ConfigurationFilename
@@ -477,6 +494,9 @@ area_number = 0
 
 for area_filter in area_filters :
 
+    # Set area name
+    AreaName = areas[area_number]
+
     # Retrieve area data 
     data_lines = RetreiveCOVIDData(area_filter,area_structure)
     
@@ -491,7 +511,6 @@ for area_filter in area_filters :
     # Extract data required to calculate rolling values
     data_lists = ReturnRollingSourceData(data_lines,Rolling)
     LastSampleDate = data_lists[len(data_lists)-1][area_field_positions['Date']]
-    AreaName = areas[area_number]
     
     # Raise any rolling cases alarm(s) required
     RollingCasesIncrease = ReturnRollingDifference(data_lists,area_field_positions['Cases'])
@@ -508,6 +527,51 @@ for area_filter in area_filters :
         ErrorMessage = 'The rolling number of cases for %s on %s was 0' % (AreaName,LastSampleDate)
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
     
+    area_number += 1
+
+# Process area death data
+area_number = 0
+
+for area_filter in area_filters :
+
+    # Set area name
+    AreaName = areas[area_number]
+
+    # Display latest death total
+    data_lines = RetreiveCOVIDData(area_filter,death_structure,latest_field='cumDeaths28DaysByPublishDate')
+    data_list = data_lines[0].split(',')
+    ErrorMessage = 'The total number of deaths for %s is now %s' % (AreaName,data_list[1])
+    Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
+
+    # Retrieve area data 
+    data_lines = RetreiveCOVIDData(area_filter,death_structure)
+    
+    # Retrieve latest 'by published date' data
+    latest_data_lines = RetreiveCOVIDData(area_filter,death_latest_structure,latest_field='newDeaths28DaysByPublishDate')
+        
+    # Add latest 'by published date' data if newer than 'by specimen date' data
+    latest_data = ReturnLatestPublishedByData(data_lines[0],latest_data_lines[len(latest_data_lines)-1])
+    if ( len(latest_data) != 0 ) :
+        data_lines.insert(0,latest_data)
+            
+    # Extract data required to calculate rolling values
+    data_lists = ReturnRollingSourceData(data_lines,Rolling)
+    LastSampleDate = data_lists[len(data_lists)-1][death_field_positions['Date']]
+    
+    # Raise any rolling deaths alarm(s) required
+    RollingDeathsIncrease = ReturnRollingDifference(data_lists,death_field_positions['Cases'])
+    if ( RollingDeathsIncrease > LTLARollingDeathsIncreaseLimit ) : 
+        ErrorMessage = 'The rolling number of deaths for %s on %s increased by %i which is greater than %i' % (AreaName,LastSampleDate,RollingDeathsIncrease,LTLARollingDeathsIncreaseLimit) 
+        Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+    
+    LastRollingDeaths= ReturnLastRollingValue(data_lists,death_field_positions['Cases'])
+    if ( LastRollingDeaths> LTLARollingDeathsLimit ) : 
+        ErrorMessage = 'The rolling number of deaths for %s on %s was %i which is greater the %i' % (AreaName,LastSampleDate,LastRollingDeaths,LTLARollingDeathsLimit)
+        Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+        
+    if ( LastRollingDeaths== 0 ) : 
+        ErrorMessage = 'The rolling number of deaths for %s on %s was 0' % (AreaName,LastSampleDate)
+
     area_number += 1
     
 # Log end of script
