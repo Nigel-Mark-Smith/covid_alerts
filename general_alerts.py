@@ -73,6 +73,7 @@
 # This script logs error and status messages to the file .\log\log.txt an to the user console.
 
 import calendar
+from colorama import init
 from datetime import date,timedelta
 import os
 import re
@@ -81,6 +82,7 @@ import sys
 import time
 from uk_covid19 import Cov19API
 import utils as Utils
+from urllib.parse import urlencode
 
 # This procedure returns a date object from a 'datestamp'.
 def ReturnDate(datestamp) :
@@ -132,25 +134,22 @@ def GenerateLTLAFilters(list) :
 # This process will retrieve the data for 'data_filter' 
 # using format 'data_structure'. The process retrieves the
 # data in csv format and then splits the data into individual
-# lines. It is possible to specify a latest_by field value 'field'
-# if a date for the latest available data of this type is required.
-def RetreiveCOVIDData(data_filter,data_structure,latest_field='') :
+# lines. 
+def RetreiveCOVIDData(data_filter,data_structure) :
 
     "This process will retrieve the data for 'data_filter' into using 'data_structure'"
     
     lines = []
     
-    # Need latest to get date for most current testing data
-    if ( len(latest_field) == 0 ) :
-        api = Cov19API(filters=data_filter,structure=data_structure)
-    else:
-        api = Cov19API(filters=data_filter,structure=data_structure,latest_by = latest_field)
+    # Retrieve data
+    api = Cov19API(filters=data_filter,structure=data_structure)
     
     # Retreive data
     try:
         data = api.get_csv()
         lines = data.splitlines()
         lines.pop(0)
+                   
     except:
         ErrorMessage = 'Data retrieve failed for filter %s' % data_filter
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,error)
@@ -294,6 +293,13 @@ NoOfparameters = 11
 comma = ','
 space = ' '
 
+# Initialize coloured text
+init()
+white = '107m'
+black = '30m'
+red = '31m'
+green = '32m'
+
 # Define overview filter and structure
 overview_filter = [
     'areaType=overview'
@@ -421,6 +427,29 @@ if ( Utils.Close(ConfigurationFileObject,failure) == failure ) : Utils.Logerror(
 ErrorMessage = 'Processing overview data'
 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
 
+# Initialize average data
+dailySummary = []
+nullDailyValues = {}
+for field in ['area','cases','deaths'] : nullDailyValues[field] = '' 
+
+# Initialize rolling summary data
+rollingSummary = []
+nullRollingValues = {}
+for field in ['area','cases','cases_increase','deaths','deaths_increase','positives','positives_increase'] : nullRollingValues[field] = ''
+
+# Initialize cumulative summary data
+cumulativeSummary = []
+nullCumulativeValues = {}
+for field in ['area','cases','deaths'] : nullCumulativeValues[field] = ''  
+
+# Initialize area cumulative values
+dailyValues = nullDailyValues
+rollingValues = nullRollingValues
+cumulativeValues = nullCumulativeValues
+dailyValues['area'] = 'UK'
+rollingValues['area'] = 'UK'
+cumulativeValues['area'] = 'UK'
+
 # Retrieve overview data
 data_lines = RetreiveCOVIDData(overview_filter,overview_structure)
 
@@ -431,43 +460,38 @@ LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
 # Raise any rolling cases alarm(s) required
 RollingCasesIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Cases'])
 if ( RollingCasesIncrease > RollingCasesIncreaseLimit ) : 
+    rollingValues['cases_increase'] = str(RollingCasesIncrease)
     ErrorMessage = 'The rolling number of cases for the UK on %s increased by %i which is greater than %i' % (LastSampleDate,RollingCasesIncrease,RollingCasesIncreaseLimit) 
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingCases = ReturnLastRollingValue(data_lists,overview_field_positions['Cases'])
 if ( LastRollingCases > RollingCasesLimit ) : 
+   rollingValues['cases'] = str(LastRollingCases)
    ErrorMessage = 'The rolling number of cases for the UK on %s was %i which is greater the %i' % (LastSampleDate,LastRollingCases,RollingCasesLimit)
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+   dailyValues['cases'] = str(LastRollingCases/Rolling)
    ErrorMessage = 'The average daily case rate in the UK on %s was %i ' % (LastSampleDate,(LastRollingCases/Rolling))
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
 # Raise any rolling death alarm(s) required
 RollingDeathsIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Deaths'])
 if ( RollingDeathsIncrease > RollingDeathsIncreaseLimit ) :  
+    rollingValues['deaths_increase'] = str(RollingDeathsIncrease)
     ErrorMessage = 'The rolling number of deaths on %s increased by %i which is greater than %i' % (LastSampleDate,RollingDeathsIncrease,RollingDeathsIncreaseLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
 LastRollingDeaths = ReturnLastRollingValue(data_lists,overview_field_positions['Deaths'])
 if ( LastRollingDeaths > RollingDeathsLimit ) :  
+    rollingValues['deaths'] = str(LastRollingDeaths)
     ErrorMessage = 'The rolling number of deaths on %s was %i which is greater than %i' % (LastSampleDate,LastRollingDeaths,RollingDeathsLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+    dailyValues['deaths'] = str(LastRollingDeaths/Rolling)
     ErrorMessage = 'The average daily death rate on %s was %i ' % (LastSampleDate,(LastRollingDeaths/Rolling))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
-# Determine latest testing data available
-date_lines = RetreiveCOVIDData(overview_filter,overview_structure,latest_field="cumPillarOneTestsByPublishDate")
-date_line = date_lines[0].split(',')
-latest_test_date = date_line[overview_field_positions['Date']]
-    
-# Remove previously retreived data lines with no PillarOneTests or PillarTwoTests test values.
-sample_no = 0
-for data_line in data_lines :
-    data_list = data_line.split(',')
-    sample_date = data_list[overview_field_positions['Date']]
-    if ( sample_date == latest_test_date ) : break
-    sample_no += 1
-
-del data_lines[0:sample_no]
+# Remove first line of data which may contain null data.
+# A better fix may be required.
+del data_lines[0]
         
 # Extract data required to calculate rolling values
 data_lists = ReturnRollingSourceData(data_lines,Rolling)
@@ -477,14 +501,20 @@ LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
 RollingPositiveRates = ReturnRollingPositiveRates(data_lists,overview_field_positions['Cases'],overview_field_positions['PillarOneTests'],overview_field_positions['PillarTwoTests'])
 RollingPositiveRateIncrease = ( RollingPositiveRates[1] - RollingPositiveRates[0] )
 if ( RollingPositiveRateIncrease > RollingPositiveRateIncreaseLimit ) :
+    rollingValues['positives_increase'] = str(RollingPositiveRateIncrease)
     ErrorMessage = 'The increase in rolling positive test rate on %s was %4.2f which is greater than %4.2f' % (LastSampleDate,float(RollingPositiveRateIncrease),float(RollingPositiveRateIncreaseLimit))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingPositiveRate = RollingPositiveRates[1]
 if ( LastRollingPositiveRate > RollingPositiveRateLimit ) :
+    rollingValues['positives'] = str(LastRollingPositiveRate)
     ErrorMessage = 'The rolling positive test rate on %s was %4.2f which is greater than %4.2f ' % (LastSampleDate,float(LastRollingPositiveRate),float(RollingPositiveRateLimit))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)  
-         
+
+# Store summary data
+rollingSummary.append(rollingValues)
+dailySummary.append(dailyValues)
+      
 # Log progress messages
 ErrorMessage = 'Processing ltla data'
 Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
@@ -499,14 +529,6 @@ for area_filter in area_filters :
 
     # Retrieve area data 
     data_lines = RetreiveCOVIDData(area_filter,area_structure)
-    
-    # Retrieve latest 'by published date' data
-    latest_data_lines = RetreiveCOVIDData(area_filter,area_latest_structure,latest_field='newCasesByPublishDate')
-        
-    # Add latest 'by published date' data if newer than 'by specimen date' data
-    latest_data = ReturnLatestPublishedByData(data_lines[0],latest_data_lines[len(latest_data_lines)-1])
-    if ( len(latest_data) != 0 ) :
-        data_lines.insert(0,latest_data)
             
     # Extract data required to calculate rolling values
     data_lists = ReturnRollingSourceData(data_lines,Rolling)
@@ -538,21 +560,10 @@ for area_filter in area_filters :
     AreaName = areas[area_number]
 
     # Display latest death total
-    data_lines = RetreiveCOVIDData(area_filter,death_structure,latest_field='cumDeaths28DaysByPublishDate')
+    data_lines = RetreiveCOVIDData(area_filter,death_structure)
     data_list = data_lines[0].split(',')
     ErrorMessage = 'The total number of deaths for %s is now %s' % (AreaName,data_list[1])
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
-
-    # Retrieve area data 
-    data_lines = RetreiveCOVIDData(area_filter,death_structure)
-    
-    # Retrieve latest 'by published date' data
-    latest_data_lines = RetreiveCOVIDData(area_filter,death_latest_structure,latest_field='newDeaths28DaysByPublishDate')
-        
-    # Add latest 'by published date' data if newer than 'by specimen date' data
-    latest_data = ReturnLatestPublishedByData(data_lines[0],latest_data_lines[len(latest_data_lines)-1])
-    if ( len(latest_data) != 0 ) :
-        data_lines.insert(0,latest_data)
             
     # Extract data required to calculate rolling values
     data_lists = ReturnRollingSourceData(data_lines,Rolling)
@@ -580,3 +591,5 @@ Utils.Logerror(ErrorFileObject,module,'Completed',info)
 # Close error log file
 ErrorMessage = 'Could not close ' + ErrorFilename
 if ( Utils.Close(ErrorFileObject,failure) == failure ) : Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+
+#print(Utils.ColourText('End',red))

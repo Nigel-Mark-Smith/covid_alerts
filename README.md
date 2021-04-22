@@ -27,3 +27,4 @@ Document File | File Contents
 covid_alerts_installation.txt | Installation instructions
 covid_alerts.docx | User documentation.
 covid_alerts_testing.txt | Script testing information
+covid_data_requests.txt | url's and curl commands for manual verification of data availability

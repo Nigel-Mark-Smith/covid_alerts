@@ -96,5 +96,14 @@ def RunScript (script,delay) :
     launch = 'start' + ' ' + script
     subprocess.run(['cmd.exe','/C',launch])
     
-    time.sleep(delay)  
+    time.sleep(delay) 
+
+# Returns bold text with embedded colour code.
+def ColourText(text,colour) :
+
+    "Returns bold text with embedded colour code"
+    
+    text = f'\033[1;{colour}{text}\033[00m'
+    
+    return text
 

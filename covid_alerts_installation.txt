@@ -1,5 +1,5 @@
 covid alerts Installation 
-==============================
+=========================
 This document details the procedure required to install the 
 Python utility script delivered in 'covid_alerts'. The 
 procedure consists of the following two main sub-sections.
