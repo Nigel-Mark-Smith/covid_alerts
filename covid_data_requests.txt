@@ -1,9 +1,9 @@
 COVID data requests
 ===================
 This document contains the url's and curl commands which provide the same data as the 
-data requests made in the script general alerts. Using these it is possible to make
+data requests made in the script 'general_alerts.py' Using these it is possible to make
 a quick manual verification that the necessary queries supported at the following
-end point are workin:
+end point are working:
 
 https://api.coronavirus.data.gov.uk/v1/data 
 
