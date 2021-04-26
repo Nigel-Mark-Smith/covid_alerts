@@ -489,9 +489,14 @@ if ( LastRollingDeaths > RollingDeathsLimit ) :
     ErrorMessage = 'The average daily death rate on %s was %i ' % (LastSampleDate,(LastRollingDeaths/Rolling))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
-# Remove first line of data which may contain null data.
-# A better fix may be required.
-del data_lines[0]
+# Remove lines with null testing data.
+valid_data_start = 0
+for data_line in data_lines : 
+    data_list = data_line.split(',')
+    if ( len(data_list[overview_field_positions['PillarOneTests']]) != 0 ) : break
+    valid_data_start += 1
+
+del data_lines[0:valid_data_start]
         
 # Extract data required to calculate rolling values
 data_lists = ReturnRollingSourceData(data_lines,Rolling)
