@@ -471,7 +471,7 @@ if ( LastRollingCases > RollingCasesLimit ) :
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
    dailyValues['cases'] = str(LastRollingCases/Rolling)
    ErrorMessage = 'The average daily case rate in the UK on %s was %i ' % (LastSampleDate,(LastRollingCases/Rolling))
-   Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
+   Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
 
 # Raise any rolling death alarm(s) required
 RollingDeathsIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Deaths'])
