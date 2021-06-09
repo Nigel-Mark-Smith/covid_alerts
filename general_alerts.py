@@ -74,7 +74,7 @@
 #
 # The delivered configuration file has the following settings:
 #
-#   7,500,3500,0,10,0.02,0.6,3,3,0,0
+#   7,500,3500,0,10,0.02,0.6,3,3,0,0,0
 #
 # Logging
 # -------
