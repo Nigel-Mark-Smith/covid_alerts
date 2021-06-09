@@ -1,7 +1,7 @@
 covid alerts Installation 
 =========================
 This document details the procedure required to install the 
-Python utility script delivered in 'covid_alerts'. The 
+Python utility scripts delivered in 'covid_alerts'. The 
 procedure consists of the following two main sub-sections.
 
 a. Installation of third party software.
@@ -9,7 +9,7 @@ b. Installation of 'covid_alerts' contents from GitHub
 
 1. Installation of third party software
 -------------------------------
-The utility script delivered in 'covid_alerts' requires the following
+The utility scripts delivered in 'covid_alerts' require the following
 3rd party software:
 
 a. ActivePython ( version Python 3.7.4 or above )
@@ -36,7 +36,7 @@ Please note the following:
 
 - To install ActivePython you must set up an ActiveState login.
 
-2. Installation of 'process_vacancies' contents from GitHub
+2. Installation of 'covid_alerts' contents from GitHub
 -----------------------------------------------------------
 
 

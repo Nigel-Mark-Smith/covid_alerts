@@ -7,7 +7,7 @@ has a configuration files which allow the criteria under which alerts are raised
 or decrease 'sensitivity'. It is envisaged that script 'covid_alerts.bat' should be run daily to assist any 
 user in being 'alert' to current COVID-19 trends.  As perparation for running this script
 the user should add the names of any LTLA ( Local Tier Local Authority ) they wish to monitor in the 
-../config/general_alerts.csv configuration file.
+./config/general_alerts.csv configuration file.
 
 Deliverables
 ------------

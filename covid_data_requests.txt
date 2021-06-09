@@ -12,6 +12,7 @@ https://api.coronavirus.data.gov.uk/v1/data
 
 https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=overview&structure=%7B%22Date%22:%22date%22,%22Cases%22:%22cumCasesByPublishDate%22,%22PillarOneTests%22:%22cumPillarOneTestsByPublishDate%22,%22PillarTwoTests%22:%22cumPillarTwoTestsByPublishDate%22,%22Deaths%22:%22cumDeaths28DaysByPublishDate%22%7D
 
+
 curl -sI "https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=overview&structure=%7B%22Date%22:%22date%22,%22Cases%22:%22cumCasesByPublishDate%22,%22PillarOneTests%22:%22cumPillarOneTestsByPublishDate%22,%22PillarTwoTests%22:%22cumPillarTwoTestsByPublishDate%22,%22Deaths%22:%22cumDeaths28DaysByPublishDate%22%7D"
 
 2. Latest overview request
@@ -45,8 +46,8 @@ curl -sI "https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;area
 6.  LTLA latest deaths request ( Worthing )
 ===========================================
 
-https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;areaName=Worthing&structure=structure=%7B%22Date%22:%22date%22,%22Cases%22:%22newDeaths28DaysByPublishDate%22%7D&latestBy=%22newDeaths28DaysByPublishDate%22
+https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;areaName=Worthing&structure=%7B%22Date%22:%22date%22,%22Cases%22:%22newDeaths28DaysByPublishDate%22%7D&latestBy=%22newDeaths28DaysByPublishDate%22
 
-curl -sI "https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;areaName=Worthing&structure=structure=%7B%22Date%22:%22date%22,%22Cases%22:%22newDeaths28DaysByPublishDate%22%7D&latestBy=%22newDeaths28DaysByPublishDate%22"
+curl -sI "https://api.coronavirus.data.gov.uk/v1/data?filters=areaType=ltla;areaName=Worthing&structure=%7B%22Date%22:%22date%22,%22Cases%22:%22newDeaths28DaysByPublishDate%22%7D&latestBy=%22newDeaths28DaysByPublishDate%22"
 
 

@@ -5,9 +5,14 @@
 #
 # This script utilises the UK COVID-19 data API and SDK to interrogate
 # current COVID data and alert the user regarding negative trends within this data. 
-# Alerts are raised when observed rolling values or increases in rolling values
-# exceed limits configured in the script's configuration file. These values may require
-# adjusting over the course of time so the alerts remain pertinent.
+# Alerts are raised when: 
+#
+# - Rolling values exceed limits configured in the script's configuration file
+# - Increases in rolling values exceed limits configured in the script's configuration file
+# - Inferred R numbers of greater than 1 are found 
+# 
+# The limits set in the script's configuration file may require adjusting over the course of 
+# time so the alerts remain pertinent.
 # 
 # For further details regarding the UK COVID-19 API see the 
 # following links:
@@ -29,7 +34,7 @@
 #
 # This file is a csv file consisting of two lines. 
 # 
-# - Line one consists of the nsmes of all ltla areas the user 
+# - Line one consists of the names of all ltla areas the user 
 #   wishes to monitor. The line must contain at least one
 #   area name eg.
 #
@@ -38,25 +43,29 @@
 # - Line two contains the value of parameters used by the script.
 #   The format of the line is as follows:
 #
-# <Rolling Period>,<Rolling UK Cases Increase Limit>,<Rolling UK Cases Limit>, \
-# <Rolling UK Deaths Increase Limit>,<Rolling UK Deaths Limit>, \
-# <Rolling UK Positive Rate Increase Limit>,<Rolling UK Positive Rate Limit>, \ 
-# <LTLA Rolling Cases Increase Limit>,<LTLA Rolling Cases Limit> \
-# <LTLA Rolling Deaths Increase Limit>,<LTLA Rolling Deaths Limit>
+# <Rolling>,<RollingCasesIncreaseLimit>,<RollingCasesLimit>, \
+# <RollingDeathsIncreaseLimit>,<RollingDeathsLimit>, \
+# <RollingPositiveRateIncreaseLimit>,<RollingPositiveRateLimit>, \ 
+# <LTLARollingCasesIncreaseLimit>,<LTLARollingCasesLimit> \
+# <LTLARollingDeathsIncreaseLimit>,<LTLARollingDeathsLimit> \
+# <ExponentialSensitivity>
 # 
-# Where
+# Where:
 #
-# - Rolling Period is the length of the rolling period in days.
-# - Increase in rolling UK cases above which an alert is raised
-# - Rolling UK cases above which an alert is raised.
-# - Increase in the UK rolling death rate above which an alert is given
-# - Rolling UK death rate above which an alert is raised
-# - Increase in rolling percentage of positive tests above which an alert is raised
-# - Rolling percentage of positive tests above which an alert is raised.
-# - Increase in rolling LTLA cases above which an alert is raised
-# - Rolling LTLA cases above which an alert is raised.
-# - Increase in rolling LTLA deaths above which an alert is raised
-# - Rolling LTLA deaths above which an alert is raised.
+# - 'Rolling'                           is the length of the rolling period in days.
+# - 'RollingCasesIncreaseLimit'         is the increase in rolling UK cases above which an alert is raised
+# - 'RollingCasesLimit'                 is the value in rolling UK cases above which an alert is raised.
+# - 'RollingDeathsIncreaseLimit'        is the increase in the UK rolling death rate above which an alert is given
+# - 'RollingDeathsLimit'                is the rolling UK death rate above which an alert is raised
+# - 'RollingPositiveRateIncreaseLimit'  is the increase in rolling percentage of positive tests above which an alert is raised
+# - 'RollingPositiveRateLimit'          is the rolling percentage of positive tests above which an alert is raised.
+# - 'LTLARollingCasesIncreaseLimit'     is the increase in rolling LTLA cases above which an alert is raised
+# - 'LTLARollingCasesLimit'             is the rolling LTLA cases above which an alert is raised.
+# - 'LTLARollingDeathsIncreaseLimit'    is the increase in rolling LTLA deaths above which an alert is raised
+# - 'LTLARollingDeathsLimit'            is the rolling LTLA deaths above which an alert is raised.
+# - 'ExponentialSensitivity'            is a paramter that increases the sensitivity with which 
+#                                       exponential growth is determine. 0 is the highest sensitivity 
+#                                       possible. See 'IsGrowthExponential' for further details.
 # 
 # Separate UK and LTLA parameters are specified for case rate and
 # death rate increases. The same rolling period is used when analysing 
@@ -83,6 +92,7 @@ import time
 from uk_covid19 import Cov19API
 import utils as Utils
 from urllib.parse import urlencode
+import math
 
 # This procedure returns a date object from a 'datestamp'.
 def ReturnDate(datestamp) :
@@ -258,6 +268,114 @@ def ReturnLatestPublishedByData(byspecimen,bypublished) :
   
     return latestdata
     
+# This procedure returns a list of data derived from 'data' 
+# containing the natural logs of the the data values at 
+# 'position' in each 'data' line. It also returns a boolean 
+# value indicating if the data values are increasing.
+# 
+# Notes: 
+# -----
+# - This procedure is only valid if cumulative data 
+#   is requested.
+#
+# - The order of the data is reversed ( to chronological order )    
+def ReturnExponentialData(data,rolling,position) :
+
+    "This procedure returns a data list from 'data' containing the natural logs of the the data values at 'position' in the 'data' lines"
+    
+    # Set intial values
+    first = True
+    derived = {'Increasing': False,'Exponentials':[]}
+    
+    # Calcluate natural log values
+    stop = rolling
+    
+    for index in range (0,stop,1) : 
+        datum = data[index][position]
+        value  = float(datum)
+        # Save first value in order to determine if
+        # data value increasing      
+        if (first) :
+            first_value = value
+            first = False
+           
+        # Calculate exponential           
+        if (value > 0.0 ) : 
+            exponential = math.log(value)
+            derived['Exponentials'].append(exponential)
+    
+    # Determine if value increaseing
+    last_value = value
+    if (last_value > first_value) : derived['Increasing'] = True
+    
+    return derived
+
+# This procedure calculates the natural log differences between successive data 
+# values and determines how many are above and below the average value.
+def IsGrowthExponential(logs,limit) :
+
+    "This procedure calculates the natural log differences between successive data values and determines how many are above an below the average value."
+
+    # Set intial values
+    derived = {'Above':0,'Below':0,'Exponential':False}
+    increments = []
+    
+    # Calculate increments in natural log values
+    for index in range (0,(len(logs)-1),1) :
+        increment = logs[index+1] - logs[index]
+        increments.append(increment)
+     
+    # Caculate average increment
+    if ( len(increments) > 0 ) : 
+        average = sum(increments)/float(len(increments))
+    else:
+        average = 0
+    
+    # Count 'above' and 'below' average values
+    for increment in increments :
+        if ( increment > average ) : derived['Above'] = derived['Above'] + 1
+        if ( increment < average ) : derived['Below'] = derived['Below'] + 1
+        
+    # Determine if difference in above and below average
+    # values is within limit.
+    difference = abs(derived['Above'] - derived['Below'])
+    if ( difference <= limit ) : derived['Exponential'] = True
+    
+    return derived
+
+# This procedure calculates rolling average data for the value 
+# at index value in lines. A date string is also extractd from index
+# date in lines. The average is calulate to include values samples
+# before to there samples after
+def Return7DayRollingAverageData(lines,value,date) :
+    
+    "This procedure calculates rolling average data for the value at position in data"
+
+    # Intialize values
+    data_lists = []
+    
+    # Create data lists
+    for line in lines :
+        data_list = line.split(',')
+        data_lists.append(data_list)
+ 
+    # Initialize return values
+    averages = []
+    
+    # Create rolling data
+    for index in range ((len(data_lists)-4),0,-1) :
+
+        # Caculate sum and average total
+        sum = 0 
+        sample_date = data_lists[index][date]
+        
+        if ( index > 2 ) : 
+            for point in range (index+3,index-4,-1) : sum = sum + int(data_lists[point][value])
+            average = float(sum/7)
+            averages.append([sample_date,average])
+            
+    return averages
+            
 ############
 ### MAIN ###
 ############
@@ -289,7 +407,7 @@ module = 'general_alerts.py'
 # Configuration file parameters
 ConfigFileLength = 2
 MinAreas = 1
-NoOfparameters = 11
+NoOfparameters = 12
 comma = ','
 space = ' '
 
@@ -310,7 +428,8 @@ overview_structure = {
     "Cases": "cumCasesByPublishDate",
     "PillarOneTests":"cumPillarOneTestsByPublishDate",
     "PillarTwoTests":"cumPillarTwoTestsByPublishDate",
-    "Deaths": "cumDeaths28DaysByPublishDate"
+    "Deaths": "cumDeaths28DaysByPublishDate",
+    "New": "newCasesByPublishDate"
 }
 
 # Generate field position information
@@ -319,13 +438,14 @@ overview_field_positions = ReturnFieldPostions(overview_structure)
 # Define latest area cases structure
 area_latest_structure = {
     "Date":"date",
-    "Cases":"newCasesByPublishDate",
+    "Cases":"newCasesByPublishDate"
 }
 
 # Define area structure    
 area_structure = {
     "Date": "date",
-    "Cases":"cumCasesBySpecimenDate"
+    "Cases":"cumCasesBySpecimenDate",
+    "New":"newCasesBySpecimenDate"
 }
 
 # Define latest area deaths structure
@@ -418,6 +538,7 @@ LTLARollingCasesIncreaseLimit = int(parameters[7])
 LTLARollingCasesLimit = int(parameters[8])
 LTLARollingDeathsIncreaseLimit = int(parameters[9])
 LTLARollingDeathsLimit = int(parameters[10])
+ExponentialSensitivity = int(parameters[11])
     
 # Close Configuration file
 ErrorMessage = 'Could not close ' + ConfigurationFilename
@@ -455,38 +576,38 @@ data_lines = RetreiveCOVIDData(overview_filter,overview_structure)
 
 # Extract data required to calculate rolling values
 data_lists = ReturnRollingSourceData(data_lines,Rolling)
-LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
+LastRollingDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
 
 # Raise any rolling cases alarm(s) required
 RollingCasesIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Cases'])
 if ( RollingCasesIncrease > RollingCasesIncreaseLimit ) : 
     rollingValues['cases_increase'] = str(RollingCasesIncrease)
-    ErrorMessage = 'The rolling number of cases for the UK on %s increased by %i which is greater than %i' % (LastSampleDate,RollingCasesIncrease,RollingCasesIncreaseLimit) 
+    ErrorMessage = 'The rolling number of cases for the UK on %s increased by %i which is greater than %i' % (LastRollingDate,RollingCasesIncrease,RollingCasesIncreaseLimit) 
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingCases = ReturnLastRollingValue(data_lists,overview_field_positions['Cases'])
 if ( LastRollingCases > RollingCasesLimit ) : 
    rollingValues['cases'] = str(LastRollingCases)
-   ErrorMessage = 'The rolling number of cases for the UK on %s was %i which is greater the %i' % (LastSampleDate,LastRollingCases,RollingCasesLimit)
+   ErrorMessage = 'The rolling number of cases for the UK on %s was %i which is greater the %i' % (LastRollingDate,LastRollingCases,RollingCasesLimit)
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
    dailyValues['cases'] = str(LastRollingCases/Rolling)
-   ErrorMessage = 'The average daily case rate in the UK on %s was %i ' % (LastSampleDate,(LastRollingCases/Rolling))
+   ErrorMessage = 'The average daily case rate in the UK on %s was %i ' % (LastRollingDate,(LastRollingCases/Rolling))
    Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
 
 # Raise any rolling death alarm(s) required
 RollingDeathsIncrease = ReturnRollingDifference(data_lists,overview_field_positions['Deaths'])
 if ( RollingDeathsIncrease > RollingDeathsIncreaseLimit ) :  
     rollingValues['deaths_increase'] = str(RollingDeathsIncrease)
-    ErrorMessage = 'The rolling number of deaths on %s increased by %i which is greater than %i' % (LastSampleDate,RollingDeathsIncrease,RollingDeathsIncreaseLimit)
+    ErrorMessage = 'The rolling number of deaths on %s increased by %i which is greater than %i' % (LastRollingDate,RollingDeathsIncrease,RollingDeathsIncreaseLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
 LastRollingDeaths = ReturnLastRollingValue(data_lists,overview_field_positions['Deaths'])
 if ( LastRollingDeaths > RollingDeathsLimit ) :  
     rollingValues['deaths'] = str(LastRollingDeaths)
-    ErrorMessage = 'The rolling number of deaths on %s was %i which is greater than %i' % (LastSampleDate,LastRollingDeaths,RollingDeathsLimit)
+    ErrorMessage = 'The rolling number of deaths on %s was %i which is greater than %i' % (LastRollingDate,LastRollingDeaths,RollingDeathsLimit)
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     dailyValues['deaths'] = str(LastRollingDeaths/Rolling)
-    ErrorMessage = 'The average daily death rate on %s was %i ' % (LastSampleDate,(LastRollingDeaths/Rolling))
+    ErrorMessage = 'The average daily death rate on %s was %i ' % (LastRollingDate,(LastRollingDeaths/Rolling))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 # Remove lines with null testing data.
@@ -500,21 +621,35 @@ del data_lines[0:valid_data_start]
         
 # Extract data required to calculate rolling values
 data_lists = ReturnRollingSourceData(data_lines,Rolling)
-LastSampleDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]    
+LastRollingDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]    
   
 # Raise any rolling positive rate alarm(s) required
 RollingPositiveRates = ReturnRollingPositiveRates(data_lists,overview_field_positions['Cases'],overview_field_positions['PillarOneTests'],overview_field_positions['PillarTwoTests'])
 RollingPositiveRateIncrease = ( RollingPositiveRates[1] - RollingPositiveRates[0] )
 if ( RollingPositiveRateIncrease > RollingPositiveRateIncreaseLimit ) :
     rollingValues['positives_increase'] = str(RollingPositiveRateIncrease)
-    ErrorMessage = 'The increase in rolling positive test rate on %s was %4.2f which is greater than %4.2f' % (LastSampleDate,float(RollingPositiveRateIncrease),float(RollingPositiveRateIncreaseLimit))
+    ErrorMessage = 'The increase in rolling positive test rate on %s was %4.2f which is greater than %4.2f' % (LastRollingDate,float(RollingPositiveRateIncrease),float(RollingPositiveRateIncreaseLimit))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
 LastRollingPositiveRate = RollingPositiveRates[1]
 if ( LastRollingPositiveRate > RollingPositiveRateLimit ) :
     rollingValues['positives'] = str(LastRollingPositiveRate)
-    ErrorMessage = 'The rolling positive test rate on %s was %4.2f which is greater than %4.2f ' % (LastSampleDate,float(LastRollingPositiveRate),float(RollingPositiveRateLimit))
+    ErrorMessage = 'The rolling positive test rate on %s was %4.2f which is greater than %4.2f ' % (LastRollingDate,float(LastRollingPositiveRate),float(RollingPositiveRateLimit))
     Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)  
+
+# Calculate latest possible 7 day case number averages
+sample_size = (2*7)-1
+rolling_lines = data_lines[0:sample_size]
+rolling_lists = Return7DayRollingAverageData(rolling_lines,overview_field_positions['New'],overview_field_positions['Date'])
+
+# Determine if there is exponential growth in case numbers.
+sample_date = rolling_lists[3][0]
+exponential_data = ReturnExponentialData(rolling_lists,7,1)
+
+if (exponential_data['Increasing']) : 
+    if (IsGrowthExponential(exponential_data['Exponentials'],ExponentialSensitivity)) : 
+        ErrorMessage = 'The R number for the UK on %s was greater than 1 ' % (sample_date)
+        Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
 
 # Store summary data
 rollingSummary.append(rollingValues)
@@ -537,22 +672,36 @@ for area_filter in area_filters :
             
     # Extract data required to calculate rolling values
     data_lists = ReturnRollingSourceData(data_lines,Rolling)
-    LastSampleDate = data_lists[len(data_lists)-1][area_field_positions['Date']]
+    LastRollingDate = data_lists[len(data_lists)-1][area_field_positions['Date']]
     
     # Raise any rolling cases alarm(s) required
     RollingCasesIncrease = ReturnRollingDifference(data_lists,area_field_positions['Cases'])
     if ( RollingCasesIncrease > LTLARollingCasesIncreaseLimit ) : 
-        ErrorMessage = 'The rolling number of cases for %s on %s increased by %i which is greater than %i' % (AreaName,LastSampleDate,RollingCasesIncrease,LTLARollingCasesIncreaseLimit) 
+        ErrorMessage = 'The rolling number of cases for %s on %s increased by %i which is greater than %i' % (AreaName,LastRollingDate,RollingCasesIncrease,LTLARollingCasesIncreaseLimit) 
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
     LastRollingCases = ReturnLastRollingValue(data_lists,area_field_positions['Cases'])
     if ( LastRollingCases > LTLARollingCasesLimit ) : 
-        ErrorMessage = 'The rolling number of cases for %s on %s was %i which is greater the %i' % (AreaName,LastSampleDate,LastRollingCases,LTLARollingCasesLimit)
+        ErrorMessage = 'The rolling number of cases for %s on %s was %i which is greater the %i' % (AreaName,LastRollingDate,LastRollingCases,LTLARollingCasesLimit)
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
         
     if ( LastRollingCases == 0 ) : 
-        ErrorMessage = 'The rolling number of cases for %s on %s was 0' % (AreaName,LastSampleDate)
+        ErrorMessage = 'The rolling number of cases for %s on %s was 0' % (AreaName,LastRollingDate)
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,info)
+        
+    # Calculate latest possible 7 day case number averages
+    sample_size = (2*7)-1
+    rolling_lines = data_lines[0:sample_size]
+    rolling_lists = Return7DayRollingAverageData(rolling_lines,area_field_positions['New'],area_field_positions['Date'])
+
+    # Determine if there is exponential growth in case numbers.
+    sample_date = rolling_lists[3][0]
+    exponential_data = ReturnExponentialData(rolling_lists,7,1)
+
+    if (exponential_data['Increasing']) : 
+        if (IsGrowthExponential(exponential_data['Exponentials'],ExponentialSensitivity)) : 
+            ErrorMessage = 'The R number for area %s on %s was greater than 1 ' % (AreaName,sample_date)
+            Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
     area_number += 1
 
@@ -572,21 +721,21 @@ for area_filter in area_filters :
             
     # Extract data required to calculate rolling values
     data_lists = ReturnRollingSourceData(data_lines,Rolling)
-    LastSampleDate = data_lists[len(data_lists)-1][death_field_positions['Date']]
+    LastRollingDate = data_lists[len(data_lists)-1][death_field_positions['Date']]
     
     # Raise any rolling deaths alarm(s) required
     RollingDeathsIncrease = ReturnRollingDifference(data_lists,death_field_positions['Cases'])
     if ( RollingDeathsIncrease > LTLARollingDeathsIncreaseLimit ) : 
-        ErrorMessage = 'The rolling number of deaths for %s on %s increased by %i which is greater than %i' % (AreaName,LastSampleDate,RollingDeathsIncrease,LTLARollingDeathsIncreaseLimit) 
+        ErrorMessage = 'The rolling number of deaths for %s on %s increased by %i which is greater than %i' % (AreaName,LastRollingDate,RollingDeathsIncrease,LTLARollingDeathsIncreaseLimit) 
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
     
     LastRollingDeaths= ReturnLastRollingValue(data_lists,death_field_positions['Cases'])
     if ( LastRollingDeaths> LTLARollingDeathsLimit ) : 
-        ErrorMessage = 'The rolling number of deaths for %s on %s was %i which is greater the %i' % (AreaName,LastSampleDate,LastRollingDeaths,LTLARollingDeathsLimit)
+        ErrorMessage = 'The rolling number of deaths for %s on %s was %i which is greater the %i' % (AreaName,LastRollingDate,LastRollingDeaths,LTLARollingDeathsLimit)
         Utils.Logerror(ErrorFileObject,module,ErrorMessage,warning)
         
     if ( LastRollingDeaths== 0 ) : 
-        ErrorMessage = 'The rolling number of deaths for %s on %s was 0' % (AreaName,LastSampleDate)
+        ErrorMessage = 'The rolling number of deaths for %s on %s was 0' % (AreaName,LastRollingDate)
 
     area_number += 1
     
