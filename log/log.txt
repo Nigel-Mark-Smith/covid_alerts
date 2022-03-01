@@ -1,0 +1,1024 @@
+Tue Aug 24 09:17:36 2021 INFO: general_alerts.py: Started
+Tue Aug 24 09:17:36 2021 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Tue Aug 24 09:17:36 2021 INFO: general_alerts.py: Processing overview data
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-08-23 increased by 27598 which is greater than 500
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-08-23 was 228968 which is greater the 3500
+Tue Aug 24 09:17:37 2021 INFO: general_alerts.py: The average daily case rate in the UK on 2021-08-23 was 32709 
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-08-23 increased by 79 which is greater than 0
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-08-23 was 701 which is greater than 10
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The average daily death rate on 2021-08-23 was 100 
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The increase in rolling positive test rate on 2021-08-22 was 0.57 which is greater than 0.02
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The rolling positive test rate on 2021-08-22 was 4.21 which is greater than 0.60 
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The R number for the UK on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:37 2021 INFO: general_alerts.py: Processing ltla data
+Tue Aug 24 09:17:37 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-08-22 was 162 which is greater the 3
+Tue Aug 24 09:17:38 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-08-22 increased by 10 which is greater than 3
+Tue Aug 24 09:17:38 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-08-22 was 383 which is greater the 3
+Tue Aug 24 09:17:38 2021 WARNING: general_alerts.py: The R number for area Arun on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:38 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-08-22 was 1097 which is greater the 3
+Tue Aug 24 09:17:39 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-08-22 increased by 154 which is greater than 3
+Tue Aug 24 09:17:39 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-08-22 was 498 which is greater the 3
+Tue Aug 24 09:17:39 2021 WARNING: general_alerts.py: The R number for area Chichester on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:39 2021 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2021-08-22 was 342 which is greater the 3
+Tue Aug 24 09:17:40 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-08-22 was 352 which is greater the 3
+Tue Aug 24 09:17:40 2021 WARNING: general_alerts.py: The R number for area Horsham on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:41 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-08-22 was 462 which is greater the 3
+Tue Aug 24 09:17:41 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-08-22 increased by 28 which is greater than 3
+Tue Aug 24 09:17:41 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-08-22 was 388 which is greater the 3
+Tue Aug 24 09:17:41 2021 WARNING: general_alerts.py: The R number for area Vale of White Horse on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:42 2021 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2021-08-22 was 313 which is greater the 3
+Tue Aug 24 09:17:42 2021 INFO: general_alerts.py: The total number of deaths for Adur is now 67
+Tue Aug 24 09:17:43 2021 INFO: general_alerts.py: The total number of deaths for Arun is now 324
+Tue Aug 24 09:17:43 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-08-23 increased by 2 which is greater than 0
+Tue Aug 24 09:17:43 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-08-23 was 4 which is greater the 0
+Tue Aug 24 09:17:43 2021 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 383
+Tue Aug 24 09:17:44 2021 INFO: general_alerts.py: The total number of deaths for Chichester is now 248
+Tue Aug 24 09:17:44 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-08-23 increased by 1 which is greater than 0
+Tue Aug 24 09:17:44 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-08-23 was 1 which is greater the 0
+Tue Aug 24 09:17:44 2021 INFO: general_alerts.py: The total number of deaths for Crawley is now 205
+Tue Aug 24 09:17:44 2021 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2021-08-23 was 1 which is greater the 0
+Tue Aug 24 09:17:45 2021 INFO: general_alerts.py: The total number of deaths for Horsham is now 201
+Tue Aug 24 09:17:45 2021 INFO: general_alerts.py: The total number of deaths for Norwich is now 215
+Tue Aug 24 09:17:46 2021 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 125
+Tue Aug 24 09:17:46 2021 INFO: general_alerts.py: The total number of deaths for Worthing is now 186
+Tue Aug 24 09:17:46 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-08-23 increased by 1 which is greater than 0
+Tue Aug 24 09:17:46 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-08-23 was 1 which is greater the 0
+Tue Aug 24 09:17:46 2021 INFO: general_alerts.py: Completed
+Tue Aug 24 09:17:56 2021 INFO: general_alerts.py: Started
+Tue Aug 24 09:17:56 2021 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Tue Aug 24 09:17:56 2021 INFO: general_alerts.py: Processing overview data
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-08-23 increased by 27598 which is greater than 500
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-08-23 was 228968 which is greater the 3500
+Tue Aug 24 09:17:56 2021 INFO: general_alerts.py: The average daily case rate in the UK on 2021-08-23 was 32709 
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-08-23 increased by 79 which is greater than 0
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-08-23 was 701 which is greater than 10
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The average daily death rate on 2021-08-23 was 100 
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The increase in rolling positive test rate on 2021-08-22 was 0.57 which is greater than 0.02
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The rolling positive test rate on 2021-08-22 was 4.21 which is greater than 0.60 
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The R number for the UK on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:56 2021 INFO: general_alerts.py: Processing ltla data
+Tue Aug 24 09:17:56 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-08-22 was 162 which is greater the 3
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-08-22 increased by 10 which is greater than 3
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-08-22 was 383 which is greater the 3
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The R number for area Arun on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-08-22 was 1097 which is greater the 3
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-08-22 increased by 154 which is greater than 3
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-08-22 was 498 which is greater the 3
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The R number for area Chichester on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:57 2021 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2021-08-22 was 342 which is greater the 3
+Tue Aug 24 09:17:58 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-08-22 was 352 which is greater the 3
+Tue Aug 24 09:17:58 2021 WARNING: general_alerts.py: The R number for area Horsham on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:58 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-08-22 was 462 which is greater the 3
+Tue Aug 24 09:17:58 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-08-22 increased by 28 which is greater than 3
+Tue Aug 24 09:17:58 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-08-22 was 388 which is greater the 3
+Tue Aug 24 09:17:58 2021 WARNING: general_alerts.py: The R number for area Vale of White Horse on 2021-08-16 was greater than 1 
+Tue Aug 24 09:17:59 2021 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2021-08-22 was 313 which is greater the 3
+Tue Aug 24 09:17:59 2021 INFO: general_alerts.py: The total number of deaths for Adur is now 67
+Tue Aug 24 09:17:59 2021 INFO: general_alerts.py: The total number of deaths for Arun is now 324
+Tue Aug 24 09:17:59 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-08-23 increased by 2 which is greater than 0
+Tue Aug 24 09:17:59 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-08-23 was 4 which is greater the 0
+Tue Aug 24 09:17:59 2021 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 383
+Tue Aug 24 09:18:00 2021 INFO: general_alerts.py: The total number of deaths for Chichester is now 248
+Tue Aug 24 09:18:00 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-08-23 increased by 1 which is greater than 0
+Tue Aug 24 09:18:00 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-08-23 was 1 which is greater the 0
+Tue Aug 24 09:18:00 2021 INFO: general_alerts.py: The total number of deaths for Crawley is now 205
+Tue Aug 24 09:18:00 2021 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2021-08-23 was 1 which is greater the 0
+Tue Aug 24 09:18:00 2021 INFO: general_alerts.py: The total number of deaths for Horsham is now 201
+Tue Aug 24 09:18:00 2021 INFO: general_alerts.py: The total number of deaths for Norwich is now 215
+Tue Aug 24 09:18:01 2021 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 125
+Tue Aug 24 09:18:01 2021 INFO: general_alerts.py: The total number of deaths for Worthing is now 186
+Tue Aug 24 09:18:01 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-08-23 increased by 1 which is greater than 0
+Tue Aug 24 09:18:01 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-08-23 was 1 which is greater the 0
+Tue Aug 24 09:18:01 2021 INFO: general_alerts.py: Completed
+Sun Aug 29 10:26:28 2021 INFO: general_alerts.py: Started
+Sun Aug 29 10:26:28 2021 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Sun Aug 29 10:26:28 2021 INFO: general_alerts.py: Processing overview data
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-08-28 increased by 17637 which is greater than 500
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-08-28 was 237556 which is greater the 3500
+Sun Aug 29 10:26:29 2021 INFO: general_alerts.py: The average daily case rate in the UK on 2021-08-28 was 33936 
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-08-28 increased by 88 which is greater than 0
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-08-28 was 785 which is greater than 10
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The average daily death rate on 2021-08-28 was 112 
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The increase in rolling positive test rate on 2021-08-26 was 0.24 which is greater than 0.02
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The rolling positive test rate on 2021-08-26 was 4.18 which is greater than 0.60 
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The R number for the UK on 2021-08-20 was greater than 1 
+Sun Aug 29 10:26:29 2021 INFO: general_alerts.py: Processing ltla data
+Sun Aug 29 10:26:29 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-08-27 was 127 which is greater the 3
+Sun Aug 29 10:26:30 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-08-27 was 376 which is greater the 3
+Sun Aug 29 10:26:30 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-08-27 was 814 which is greater the 3
+Sun Aug 29 10:26:31 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-08-27 was 335 which is greater the 3
+Sun Aug 29 10:26:31 2021 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2021-08-27 was 331 which is greater the 3
+Sun Aug 29 10:26:32 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-08-27 was 291 which is greater the 3
+Sun Aug 29 10:26:32 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-08-27 was 364 which is greater the 3
+Sun Aug 29 10:26:33 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-08-27 was 351 which is greater the 3
+Sun Aug 29 10:26:34 2021 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2021-08-27 was 243 which is greater the 3
+Sun Aug 29 10:26:34 2021 INFO: general_alerts.py: The total number of deaths for Adur is now 68
+Sun Aug 29 10:26:34 2021 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2021-08-28 increased by 1 which is greater than 0
+Sun Aug 29 10:26:34 2021 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2021-08-28 was 1 which is greater the 0
+Sun Aug 29 10:26:35 2021 INFO: general_alerts.py: The total number of deaths for Arun is now 324
+Sun Aug 29 10:26:35 2021 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 389
+Sun Aug 29 10:26:35 2021 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2021-08-28 increased by 6 which is greater than 0
+Sun Aug 29 10:26:35 2021 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2021-08-28 was 6 which is greater the 0
+Sun Aug 29 10:26:37 2021 INFO: general_alerts.py: The total number of deaths for Chichester is now 248
+Sun Aug 29 10:26:38 2021 INFO: general_alerts.py: The total number of deaths for Crawley is now 206
+Sun Aug 29 10:26:38 2021 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2021-08-28 was 1 which is greater the 0
+Sun Aug 29 10:26:38 2021 INFO: general_alerts.py: The total number of deaths for Horsham is now 201
+Sun Aug 29 10:26:39 2021 INFO: general_alerts.py: The total number of deaths for Norwich is now 216
+Sun Aug 29 10:26:39 2021 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2021-08-28 was 1 which is greater the 0
+Sun Aug 29 10:26:39 2021 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 125
+Sun Aug 29 10:26:40 2021 INFO: general_alerts.py: The total number of deaths for Worthing is now 189
+Sun Aug 29 10:26:40 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-08-28 increased by 2 which is greater than 0
+Sun Aug 29 10:26:40 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-08-28 was 3 which is greater the 0
+Sun Aug 29 10:26:40 2021 INFO: general_alerts.py: Completed
+Tue Sep  7 17:17:59 2021 INFO: general_alerts.py: Started
+Tue Sep  7 17:17:59 2021 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Tue Sep  7 17:17:59 2021 INFO: general_alerts.py: Processing overview data
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-09-07 increased by 32144 which is greater than 500
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-09-07 was 266525 which is greater the 3500
+Tue Sep  7 17:18:00 2021 INFO: general_alerts.py: The average daily case rate in the UK on 2021-09-07 was 38075 
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-09-07 increased by 267 which is greater than 0
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-09-07 was 948 which is greater than 10
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The average daily death rate on 2021-09-07 was 135 
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The rolling positive test rate on 2021-09-06 was 3.28 which is greater than 0.60 
+Tue Sep  7 17:18:00 2021 WARNING: general_alerts.py: The R number for the UK on 2021-08-31 was greater than 1 
+Tue Sep  7 17:18:00 2021 INFO: general_alerts.py: Processing ltla data
+Tue Sep  7 17:18:01 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-09-06 was 119 which is greater the 3
+Tue Sep  7 17:18:01 2021 WARNING: general_alerts.py: The R number for area Adur on 2021-08-31 was greater than 1 
+Tue Sep  7 17:18:01 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-09-06 was 343 which is greater the 3
+Tue Sep  7 17:18:02 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-09-06 increased by 42 which is greater than 3
+Tue Sep  7 17:18:02 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-09-06 was 829 which is greater the 3
+Tue Sep  7 17:18:02 2021 WARNING: general_alerts.py: The R number for area Brighton and Hove on 2021-08-31 was greater than 1 
+Tue Sep  7 17:18:02 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-09-06 increased by 7 which is greater than 3
+Tue Sep  7 17:18:03 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-09-06 was 321 which is greater the 3
+Tue Sep  7 17:18:03 2021 WARNING: general_alerts.py: The R number for area Chichester on 2021-08-31 was greater than 1 
+Tue Sep  7 17:18:03 2021 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2021-09-06 was 293 which is greater the 3
+Tue Sep  7 17:18:04 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-09-06 increased by 5 which is greater than 3
+Tue Sep  7 17:18:04 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-09-06 was 338 which is greater the 3
+Tue Sep  7 17:18:04 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-09-06 was 386 which is greater the 3
+Tue Sep  7 17:18:05 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-09-06 increased by 33 which is greater than 3
+Tue Sep  7 17:18:05 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-09-06 was 404 which is greater the 3
+Tue Sep  7 17:18:05 2021 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2021-09-06 was 230 which is greater the 3
+Tue Sep  7 17:18:06 2021 INFO: general_alerts.py: The total number of deaths for Adur is now 69
+Tue Sep  7 17:18:06 2021 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2021-09-07 was 1 which is greater the 0
+Tue Sep  7 17:18:07 2021 INFO: general_alerts.py: The total number of deaths for Arun is now 326
+Tue Sep  7 17:18:07 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-09-07 increased by 2 which is greater than 0
+Tue Sep  7 17:18:07 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-09-07 was 2 which is greater the 0
+Tue Sep  7 17:18:08 2021 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 393
+Tue Sep  7 17:18:08 2021 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2021-09-07 was 3 which is greater the 0
+Tue Sep  7 17:18:08 2021 INFO: general_alerts.py: The total number of deaths for Chichester is now 249
+Tue Sep  7 17:18:09 2021 INFO: general_alerts.py: The total number of deaths for Crawley is now 207
+Tue Sep  7 17:18:10 2021 INFO: general_alerts.py: The total number of deaths for Horsham is now 204
+Tue Sep  7 17:18:10 2021 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2021-09-07 increased by 3 which is greater than 0
+Tue Sep  7 17:18:10 2021 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2021-09-07 was 3 which is greater the 0
+Tue Sep  7 17:18:10 2021 INFO: general_alerts.py: The total number of deaths for Norwich is now 218
+Tue Sep  7 17:18:10 2021 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2021-09-07 increased by 3 which is greater than 0
+Tue Sep  7 17:18:10 2021 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2021-09-07 was 3 which is greater the 0
+Tue Sep  7 17:18:11 2021 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 125
+Tue Sep  7 17:18:11 2021 INFO: general_alerts.py: The total number of deaths for Worthing is now 191
+Tue Sep  7 17:18:11 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-09-07 was 2 which is greater the 0
+Tue Sep  7 17:18:11 2021 INFO: general_alerts.py: Completed
+Mon Sep 20 13:55:19 2021 INFO: general_alerts.py: Started
+Mon Sep 20 13:55:19 2021 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Mon Sep 20 13:55:19 2021 INFO: general_alerts.py: Processing overview data
+Mon Sep 20 13:55:20 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-09-19 was 203470 which is greater the 3500
+Mon Sep 20 13:55:20 2021 INFO: general_alerts.py: The average daily case rate in the UK on 2021-09-19 was 29067 
+Mon Sep 20 13:55:20 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-09-19 increased by 32 which is greater than 0
+Mon Sep 20 13:55:20 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-09-19 was 1003 which is greater than 10
+Mon Sep 20 13:55:20 2021 WARNING: general_alerts.py: The average daily death rate on 2021-09-19 was 143 
+Mon Sep 20 13:55:20 2021 WARNING: general_alerts.py: The rolling positive test rate on 2021-09-16 was 2.73 which is greater than 0.60 
+Mon Sep 20 13:55:20 2021 INFO: general_alerts.py: Processing ltla data
+Mon Sep 20 13:55:21 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-09-18 increased by 22 which is greater than 3
+Mon Sep 20 13:55:21 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-09-18 was 134 which is greater the 3
+Mon Sep 20 13:55:21 2021 WARNING: general_alerts.py: The R number for area Adur on 2021-09-12 was greater than 1 
+Mon Sep 20 13:55:22 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-09-18 was 275 which is greater the 3
+Mon Sep 20 13:55:24 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-09-18 was 420 which is greater the 3
+Mon Sep 20 13:55:25 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-09-18 was 164 which is greater the 3
+Mon Sep 20 13:55:26 2021 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2021-09-18 was 204 which is greater the 3
+Mon Sep 20 13:55:27 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-09-18 was 209 which is greater the 3
+Mon Sep 20 13:55:28 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-09-18 was 240 which is greater the 3
+Mon Sep 20 13:55:29 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-09-18 was 311 which is greater the 3
+Mon Sep 20 13:55:30 2021 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2021-09-18 was 159 which is greater the 3
+Mon Sep 20 13:55:32 2021 INFO: general_alerts.py: The total number of deaths for Adur is now 69
+Mon Sep 20 13:55:32 2021 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2021-09-19 increased by 1 which is greater than 0
+Mon Sep 20 13:55:33 2021 INFO: general_alerts.py: The total number of deaths for Arun is now 329
+Mon Sep 20 13:55:33 2021 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2021-09-19 was 1 which is greater the 0
+Mon Sep 20 13:55:34 2021 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 400
+Mon Sep 20 13:55:34 2021 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2021-09-19 increased by 3 which is greater than 0
+Mon Sep 20 13:55:34 2021 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2021-09-19 was 5 which is greater the 0
+Mon Sep 20 13:55:35 2021 INFO: general_alerts.py: The total number of deaths for Chichester is now 250
+Mon Sep 20 13:55:35 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-09-19 increased by 1 which is greater than 0
+Mon Sep 20 13:55:35 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-09-19 was 1 which is greater the 0
+Mon Sep 20 13:55:36 2021 INFO: general_alerts.py: The total number of deaths for Crawley is now 207
+Mon Sep 20 13:55:38 2021 INFO: general_alerts.py: The total number of deaths for Horsham is now 205
+Mon Sep 20 13:55:38 2021 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2021-09-19 was 1 which is greater the 0
+Mon Sep 20 13:55:39 2021 INFO: general_alerts.py: The total number of deaths for Norwich is now 220
+Mon Sep 20 13:55:39 2021 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2021-09-19 increased by 2 which is greater than 0
+Mon Sep 20 13:55:39 2021 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2021-09-19 was 2 which is greater the 0
+Mon Sep 20 13:55:40 2021 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 127
+Mon Sep 20 13:55:40 2021 WARNING: general_alerts.py: The rolling number of deaths for Vale of White Horse on 2021-09-19 increased by 2 which is greater than 0
+Mon Sep 20 13:55:40 2021 WARNING: general_alerts.py: The rolling number of deaths for Vale of White Horse on 2021-09-19 was 2 which is greater the 0
+Mon Sep 20 13:55:41 2021 INFO: general_alerts.py: The total number of deaths for Worthing is now 194
+Mon Sep 20 13:55:41 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-09-19 was 1 which is greater the 0
+Mon Sep 20 13:55:41 2021 INFO: general_alerts.py: Completed
+Mon Oct  4 13:10:03 2021 INFO: general_alerts.py: Started
+Mon Oct  4 13:10:03 2021 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Mon Oct  4 13:10:03 2021 INFO: general_alerts.py: Processing overview data
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-10-03 increased by 1966 which is greater than 500
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The rolling number of cases for the UK on 2021-10-03 was 236450 which is greater the 3500
+Mon Oct  4 13:10:04 2021 INFO: general_alerts.py: The average daily case rate in the UK on 2021-10-03 was 33778 
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The rolling number of deaths on 2021-10-03 was 785 which is greater than 10
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The average daily death rate on 2021-10-03 was 112 
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The increase in rolling positive test rate on 2021-09-30 was 0.19 which is greater than 0.02
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The rolling positive test rate on 2021-09-30 was 3.34 which is greater than 0.60 
+Mon Oct  4 13:10:04 2021 WARNING: general_alerts.py: The R number for the UK on 2021-09-24 was greater than 1 
+Mon Oct  4 13:10:04 2021 INFO: general_alerts.py: Processing ltla data
+Mon Oct  4 13:10:05 2021 WARNING: general_alerts.py: The rolling number of cases for Adur on 2021-10-02 was 217 which is greater the 3
+Mon Oct  4 13:10:05 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-10-02 increased by 34 which is greater than 3
+Mon Oct  4 13:10:05 2021 WARNING: general_alerts.py: The rolling number of cases for Arun on 2021-10-02 was 438 which is greater the 3
+Mon Oct  4 13:10:05 2021 WARNING: general_alerts.py: The R number for area Arun on 2021-09-26 was greater than 1 
+Mon Oct  4 13:10:06 2021 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2021-10-02 was 566 which is greater the 3
+Mon Oct  4 13:10:06 2021 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2021-10-02 was 166 which is greater the 3
+Mon Oct  4 13:10:07 2021 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2021-10-02 was 344 which is greater the 3
+Mon Oct  4 13:10:08 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-10-02 increased by 63 which is greater than 3
+Mon Oct  4 13:10:08 2021 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2021-10-02 was 410 which is greater the 3
+Mon Oct  4 13:10:08 2021 WARNING: general_alerts.py: The R number for area Horsham on 2021-09-26 was greater than 1 
+Mon Oct  4 13:10:08 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-10-02 increased by 30 which is greater than 3
+Mon Oct  4 13:10:08 2021 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2021-10-02 was 389 which is greater the 3
+Mon Oct  4 13:10:08 2021 WARNING: general_alerts.py: The R number for area Norwich on 2021-09-26 was greater than 1 
+Mon Oct  4 13:10:09 2021 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2021-10-02 was 329 which is greater the 3
+Mon Oct  4 13:10:09 2021 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2021-10-02 was 273 which is greater the 3
+Mon Oct  4 13:10:10 2021 INFO: general_alerts.py: The total number of deaths for Adur is now 71
+Mon Oct  4 13:10:10 2021 INFO: general_alerts.py: The total number of deaths for Arun is now 331
+Mon Oct  4 13:10:11 2021 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 402
+Mon Oct  4 13:10:11 2021 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2021-10-03 was 1 which is greater the 0
+Mon Oct  4 13:10:11 2021 INFO: general_alerts.py: The total number of deaths for Chichester is now 252
+Mon Oct  4 13:10:11 2021 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2021-10-03 was 1 which is greater the 0
+Mon Oct  4 13:10:12 2021 INFO: general_alerts.py: The total number of deaths for Crawley is now 209
+Mon Oct  4 13:10:12 2021 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2021-10-03 was 1 which is greater the 0
+Mon Oct  4 13:10:13 2021 INFO: general_alerts.py: The total number of deaths for Horsham is now 205
+Mon Oct  4 13:10:13 2021 INFO: general_alerts.py: The total number of deaths for Norwich is now 222
+Mon Oct  4 13:10:14 2021 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 128
+Mon Oct  4 13:10:14 2021 WARNING: general_alerts.py: The rolling number of deaths for Vale of White Horse on 2021-10-03 increased by 1 which is greater than 0
+Mon Oct  4 13:10:14 2021 WARNING: general_alerts.py: The rolling number of deaths for Vale of White Horse on 2021-10-03 was 1 which is greater the 0
+Mon Oct  4 13:10:14 2021 INFO: general_alerts.py: The total number of deaths for Worthing is now 197
+Mon Oct  4 13:10:14 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-10-03 increased by 3 which is greater than 0
+Mon Oct  4 13:10:14 2021 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2021-10-03 was 3 which is greater the 0
+Mon Oct  4 13:10:14 2021 INFO: general_alerts.py: Completed
+Wed Feb  9 13:48:25 2022 INFO: general_alerts.py: Started
+Wed Feb  9 13:48:25 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb  9 13:48:25 2022 INFO: general_alerts.py: Processing overview data
+Wed Feb  9 13:48:25 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-08 was 504458 which is greater the 3500
+Wed Feb  9 13:48:25 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-08 was 72065 
+Wed Feb  9 13:48:25 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-08 was 1802 which is greater than 10
+Wed Feb  9 13:48:25 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-08 was 257 
+Wed Feb  9 13:48:25 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-07 was 6.69 which is greater than 0.60 
+Wed Feb  9 13:48:25 2022 INFO: general_alerts.py: Processing ltla data
+Wed Feb  9 13:48:26 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-07 was 603 which is greater the 3
+Wed Feb  9 13:48:27 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-07 was 1503 which is greater the 3
+Wed Feb  9 13:48:27 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-07 was 2839 which is greater the 3
+Wed Feb  9 13:48:28 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-07 was 1159 which is greater the 3
+Wed Feb  9 13:48:28 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-07 was 1073 which is greater the 3
+Wed Feb  9 13:48:29 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-07 was 1651 which is greater the 3
+Wed Feb  9 13:48:30 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-07 was 1300 which is greater the 3
+Wed Feb  9 13:48:30 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-07 was 1156 which is greater the 3
+Wed Feb  9 13:48:31 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-07 was 1144 which is greater the 3
+Wed Feb  9 13:48:32 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 82
+Wed Feb  9 13:48:32 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 384
+Wed Feb  9 13:48:32 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-08 increased by 2 which is greater than 0
+Wed Feb  9 13:48:32 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-08 was 6 which is greater the 0
+Wed Feb  9 13:48:33 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 455
+Wed Feb  9 13:48:33 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-08 was 4 which is greater the 0
+Wed Feb  9 13:48:33 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Wed Feb  9 13:48:33 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-08 increased by 1 which is greater than 0
+Wed Feb  9 13:48:33 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-08 was 4 which is greater the 0
+Wed Feb  9 13:48:34 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 235
+Wed Feb  9 13:48:34 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-08 was 2 which is greater the 0
+Wed Feb  9 13:48:35 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 238
+Wed Feb  9 13:48:35 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-08 increased by 12 which is greater than 0
+Wed Feb  9 13:48:35 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-08 was 11 which is greater the 0
+Wed Feb  9 13:48:35 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Wed Feb  9 13:48:35 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-08 increased by 6 which is greater than 0
+Wed Feb  9 13:48:35 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-08 was 6 which is greater the 0
+Wed Feb  9 13:48:36 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 151
+Wed Feb  9 13:48:37 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Wed Feb  9 13:48:37 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-08 was 1 which is greater the 0
+Wed Feb  9 13:48:37 2022 INFO: general_alerts.py: Completed
+Thu Feb 10 14:05:00 2022 INFO: general_alerts.py: Started
+Thu Feb 10 14:05:00 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 10 14:05:00 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 10 14:05:01 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-09 was 480411 which is greater the 3500
+Thu Feb 10 14:05:01 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-09 was 68630 
+Thu Feb 10 14:05:01 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-09 was 1526 which is greater than 10
+Thu Feb 10 14:05:01 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-09 was 218 
+Thu Feb 10 14:05:01 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-08 was 6.22 which is greater than 0.60 
+Thu Feb 10 14:05:01 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 10 14:05:01 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-08 was 583 which is greater the 3
+Thu Feb 10 14:05:02 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-08 was 1476 which is greater the 3
+Thu Feb 10 14:05:03 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-08 was 2750 which is greater the 3
+Thu Feb 10 14:05:04 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-08 was 1144 which is greater the 3
+Thu Feb 10 14:05:04 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-08 was 1033 which is greater the 3
+Thu Feb 10 14:05:05 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-08 was 1628 which is greater the 3
+Thu Feb 10 14:05:05 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-08 was 1227 which is greater the 3
+Thu Feb 10 14:05:06 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-08 was 1116 which is greater the 3
+Thu Feb 10 14:05:06 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-08 was 1121 which is greater the 3
+Thu Feb 10 14:05:07 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 83
+Thu Feb 10 14:05:07 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-09 was 1 which is greater the 0
+Thu Feb 10 14:05:07 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 383
+Thu Feb 10 14:05:07 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-09 was 2 which is greater the 0
+Thu Feb 10 14:05:08 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Thu Feb 10 14:05:08 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-09 was 3 which is greater the 0
+Thu Feb 10 14:05:09 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Thu Feb 10 14:05:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-09 was 1 which is greater the 0
+Thu Feb 10 14:05:09 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Thu Feb 10 14:05:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-09 was 1 which is greater the 0
+Thu Feb 10 14:05:10 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 239
+Thu Feb 10 14:05:10 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 increased by 9 which is greater than 0
+Thu Feb 10 14:05:10 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 was 10 which is greater the 0
+Thu Feb 10 14:05:11 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Thu Feb 10 14:05:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-09 increased by 4 which is greater than 0
+Thu Feb 10 14:05:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-09 was 5 which is greater the 0
+Thu Feb 10 14:05:11 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Thu Feb 10 14:05:12 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 10 14:05:12 2022 INFO: general_alerts.py: Completed
+Thu Feb 10 14:09:29 2022 INFO: general_alerts.py: Started
+Thu Feb 10 14:09:29 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 10 14:09:29 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 10 14:09:29 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-09 was 480411 which is greater the 480000
+Thu Feb 10 14:09:29 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-09 was 68630 
+Thu Feb 10 14:09:29 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-09 was 1526 which is greater than 10
+Thu Feb 10 14:09:29 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-09 was 218 
+Thu Feb 10 14:09:29 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-08 was 6.22 which is greater than 0.60 
+Thu Feb 10 14:09:29 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 10 14:09:30 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-08 was 583 which is greater the 3
+Thu Feb 10 14:09:30 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-08 was 1476 which is greater the 3
+Thu Feb 10 14:09:31 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-08 was 2750 which is greater the 3
+Thu Feb 10 14:09:32 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-08 was 1144 which is greater the 3
+Thu Feb 10 14:09:32 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-08 was 1033 which is greater the 3
+Thu Feb 10 14:09:33 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-08 was 1628 which is greater the 3
+Thu Feb 10 14:09:34 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-08 was 1227 which is greater the 3
+Thu Feb 10 14:09:34 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-08 was 1116 which is greater the 3
+Thu Feb 10 14:09:35 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-08 was 1121 which is greater the 3
+Thu Feb 10 14:09:35 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 83
+Thu Feb 10 14:09:36 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 383
+Thu Feb 10 14:09:36 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Thu Feb 10 14:09:37 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Thu Feb 10 14:09:37 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Thu Feb 10 14:09:38 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 239
+Thu Feb 10 14:09:38 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Thu Feb 10 14:09:39 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Thu Feb 10 14:09:39 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 10 14:09:39 2022 INFO: general_alerts.py: Completed
+Thu Feb 10 14:11:17 2022 INFO: general_alerts.py: Started
+Thu Feb 10 14:11:17 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 10 14:11:17 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 10 14:11:18 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-09 was 480411 which is greater the 480000
+Thu Feb 10 14:11:18 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-09 was 68630 
+Thu Feb 10 14:11:18 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-09 was 1526 which is greater than 10
+Thu Feb 10 14:11:18 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-09 was 218 
+Thu Feb 10 14:11:18 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-08 was 6.22 which is greater than 0.60 
+Thu Feb 10 14:11:18 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 10 14:11:19 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-08 was 583 which is greater the 3
+Thu Feb 10 14:11:19 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-08 was 1476 which is greater the 3
+Thu Feb 10 14:11:20 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-08 was 2750 which is greater the 3
+Thu Feb 10 14:11:20 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-08 was 1144 which is greater the 3
+Thu Feb 10 14:11:20 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-08 was 1033 which is greater the 3
+Thu Feb 10 14:11:21 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-08 was 1628 which is greater the 3
+Thu Feb 10 14:11:22 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-08 was 1227 which is greater the 3
+Thu Feb 10 14:11:22 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-08 was 1116 which is greater the 3
+Thu Feb 10 14:11:23 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-08 was 1121 which is greater the 3
+Thu Feb 10 14:11:24 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 83
+Thu Feb 10 14:11:24 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-09 was 1 which is greater the 0
+Thu Feb 10 14:11:24 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 383
+Thu Feb 10 14:11:24 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-09 was 2 which is greater the 0
+Thu Feb 10 14:11:24 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Thu Feb 10 14:11:24 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-09 was 3 which is greater the 0
+Thu Feb 10 14:11:25 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Thu Feb 10 14:11:25 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-09 was 1 which is greater the 0
+Thu Feb 10 14:11:26 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Thu Feb 10 14:11:26 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-09 was 1 which is greater the 0
+Thu Feb 10 14:11:26 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 239
+Thu Feb 10 14:11:26 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 increased by 9 which is greater than 0
+Thu Feb 10 14:11:26 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 was 10 which is greater the 0
+Thu Feb 10 14:11:27 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Thu Feb 10 14:11:27 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-09 increased by 4 which is greater than 0
+Thu Feb 10 14:11:27 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-09 was 5 which is greater the 0
+Thu Feb 10 14:11:27 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Thu Feb 10 14:11:28 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 10 14:11:28 2022 INFO: general_alerts.py: Completed
+Thu Feb 10 14:13:01 2022 INFO: general_alerts.py: Started
+Thu Feb 10 14:13:01 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 10 14:13:01 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 10 14:13:02 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-09 was 480411 which is greater the 480000
+Thu Feb 10 14:13:02 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-09 was 68630 
+Thu Feb 10 14:13:02 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-09 was 1526 which is greater than 10
+Thu Feb 10 14:13:02 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-09 was 218 
+Thu Feb 10 14:13:02 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-08 was 6.22 which is greater than 0.60 
+Thu Feb 10 14:13:02 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 10 14:13:03 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-08 was 583 which is greater the 3
+Thu Feb 10 14:13:03 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-08 was 1476 which is greater the 3
+Thu Feb 10 14:13:04 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-08 was 2750 which is greater the 3
+Thu Feb 10 14:13:05 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-08 was 1144 which is greater the 3
+Thu Feb 10 14:13:05 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-08 was 1033 which is greater the 3
+Thu Feb 10 14:13:06 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-08 was 1628 which is greater the 3
+Thu Feb 10 14:13:06 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-08 was 1227 which is greater the 3
+Thu Feb 10 14:13:07 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-08 was 1116 which is greater the 3
+Thu Feb 10 14:13:08 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-08 was 1121 which is greater the 3
+Thu Feb 10 14:13:08 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 83
+Thu Feb 10 14:13:09 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 383
+Thu Feb 10 14:13:09 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Thu Feb 10 14:13:10 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Thu Feb 10 14:13:10 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Thu Feb 10 14:13:11 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 239
+Thu Feb 10 14:13:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 increased by 9 which is greater than 5
+Thu Feb 10 14:13:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 was 10 which is greater the 5
+Thu Feb 10 14:13:11 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Thu Feb 10 14:13:12 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Thu Feb 10 14:13:12 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 10 14:13:12 2022 INFO: general_alerts.py: Completed
+Thu Feb 10 14:18:36 2022 INFO: general_alerts.py: Started
+Thu Feb 10 14:18:36 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 10 14:18:36 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 10 14:18:37 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-09 was 480411 which is greater the 480000
+Thu Feb 10 14:18:37 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-09 was 68630 
+Thu Feb 10 14:18:37 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-09 was 1526 which is greater than 1500
+Thu Feb 10 14:18:37 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-09 was 218 
+Thu Feb 10 14:18:37 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-08 was 6.22 which is greater than 0.60 
+Thu Feb 10 14:18:37 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 10 14:18:38 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-08 was 1476 which is greater the 1000
+Thu Feb 10 14:18:39 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-08 was 2750 which is greater the 1000
+Thu Feb 10 14:18:39 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-08 was 1144 which is greater the 1000
+Thu Feb 10 14:18:40 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-08 was 1033 which is greater the 1000
+Thu Feb 10 14:18:40 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-08 was 1628 which is greater the 1000
+Thu Feb 10 14:18:41 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-08 was 1227 which is greater the 1000
+Thu Feb 10 14:18:41 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-08 was 1116 which is greater the 1000
+Thu Feb 10 14:18:42 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-08 was 1121 which is greater the 1000
+Thu Feb 10 14:18:42 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 83
+Thu Feb 10 14:18:43 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 383
+Thu Feb 10 14:18:43 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Thu Feb 10 14:18:44 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Thu Feb 10 14:18:45 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Thu Feb 10 14:18:45 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 239
+Thu Feb 10 14:18:45 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 increased by 9 which is greater than 5
+Thu Feb 10 14:18:45 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 was 10 which is greater the 5
+Thu Feb 10 14:18:46 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Thu Feb 10 14:18:47 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Thu Feb 10 14:18:47 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 10 14:18:47 2022 INFO: general_alerts.py: Completed
+Thu Feb 10 14:18:59 2022 INFO: general_alerts.py: Started
+Thu Feb 10 14:18:59 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 10 14:18:59 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 10 14:18:59 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-09 was 480411 which is greater the 480000
+Thu Feb 10 14:18:59 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-09 was 68630 
+Thu Feb 10 14:18:59 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-09 was 1526 which is greater than 1500
+Thu Feb 10 14:18:59 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-09 was 218 
+Thu Feb 10 14:18:59 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-08 was 6.22 which is greater than 0.60 
+Thu Feb 10 14:18:59 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 10 14:19:00 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-08 was 1476 which is greater the 1000
+Thu Feb 10 14:19:01 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-08 was 2750 which is greater the 1000
+Thu Feb 10 14:19:01 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-08 was 1144 which is greater the 1000
+Thu Feb 10 14:19:02 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-08 was 1033 which is greater the 1000
+Thu Feb 10 14:19:02 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-08 was 1628 which is greater the 1000
+Thu Feb 10 14:19:03 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-08 was 1227 which is greater the 1000
+Thu Feb 10 14:19:03 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-08 was 1116 which is greater the 1000
+Thu Feb 10 14:19:03 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-08 was 1121 which is greater the 1000
+Thu Feb 10 14:19:04 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 83
+Thu Feb 10 14:19:04 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 383
+Thu Feb 10 14:19:05 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Thu Feb 10 14:19:05 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 287
+Thu Feb 10 14:19:06 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Thu Feb 10 14:19:06 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 239
+Thu Feb 10 14:19:06 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 increased by 9 which is greater than 5
+Thu Feb 10 14:19:06 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-09 was 10 which is greater the 5
+Thu Feb 10 14:19:06 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Thu Feb 10 14:19:07 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Thu Feb 10 14:19:08 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 10 14:19:08 2022 INFO: general_alerts.py: Completed
+Fri Feb 11 10:01:12 2022 INFO: general_alerts.py: Started
+Fri Feb 11 10:01:12 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Fri Feb 11 10:01:12 2022 INFO: general_alerts.py: Processing overview data
+Fri Feb 11 10:01:13 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-10 was 554367 which is greater the 480000
+Fri Feb 11 10:01:13 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-10 was 79195 
+Fri Feb 11 10:01:13 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-09 was 6.06 which is greater than 0.60 
+Fri Feb 11 10:01:13 2022 INFO: general_alerts.py: Processing ltla data
+Fri Feb 11 10:01:14 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-09 was 1365 which is greater the 1000
+Fri Feb 11 10:01:14 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-09 was 2683 which is greater the 1000
+Fri Feb 11 10:01:15 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-09 was 1099 which is greater the 1000
+Fri Feb 11 10:01:16 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-09 was 1611 which is greater the 1000
+Fri Feb 11 10:01:17 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-09 was 1163 which is greater the 1000
+Fri Feb 11 10:01:17 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-09 was 1062 which is greater the 1000
+Fri Feb 11 10:01:18 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-09 was 1065 which is greater the 1000
+Fri Feb 11 10:01:18 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 84
+Fri Feb 11 10:01:19 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 385
+Fri Feb 11 10:01:20 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 455
+Fri Feb 11 10:01:20 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 288
+Fri Feb 11 10:01:21 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Fri Feb 11 10:01:21 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 240
+Fri Feb 11 10:01:21 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-10 increased by 10 which is greater than 5
+Fri Feb 11 10:01:21 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-10 was 11 which is greater the 5
+Fri Feb 11 10:01:23 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 249
+Fri Feb 11 10:01:23 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Fri Feb 11 10:01:24 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 224
+Fri Feb 11 10:01:24 2022 INFO: general_alerts.py: Completed
+Fri Feb 11 10:03:33 2022 INFO: general_alerts.py: Started
+Fri Feb 11 10:03:33 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Fri Feb 11 10:03:33 2022 INFO: general_alerts.py: Processing overview data
+Fri Feb 11 10:03:33 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-10 was 554367 which is greater the 480000
+Fri Feb 11 10:03:33 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-10 was 79195 
+Fri Feb 11 10:03:33 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-09 was 6.06 which is greater than 6.00 
+Fri Feb 11 10:03:33 2022 INFO: general_alerts.py: Processing ltla data
+Fri Feb 11 10:03:34 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-09 was 1365 which is greater the 1000
+Fri Feb 11 10:03:35 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-09 was 2683 which is greater the 1000
+Fri Feb 11 10:03:35 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-09 was 1099 which is greater the 1000
+Fri Feb 11 10:03:36 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-09 was 1611 which is greater the 1000
+Fri Feb 11 10:03:37 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-09 was 1163 which is greater the 1000
+Fri Feb 11 10:03:38 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-09 was 1062 which is greater the 1000
+Fri Feb 11 10:03:38 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-09 was 1065 which is greater the 1000
+Fri Feb 11 10:03:39 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 84
+Fri Feb 11 10:03:40 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 385
+Fri Feb 11 10:03:40 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 455
+Fri Feb 11 10:03:41 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 288
+Fri Feb 11 10:03:41 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Fri Feb 11 10:03:42 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 240
+Fri Feb 11 10:03:42 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-10 increased by 10 which is greater than 5
+Fri Feb 11 10:03:42 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-10 was 11 which is greater the 5
+Fri Feb 11 10:03:43 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 249
+Fri Feb 11 10:03:43 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 150
+Fri Feb 11 10:03:44 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 224
+Fri Feb 11 10:03:44 2022 INFO: general_alerts.py: Completed
+Sat Feb 12 15:49:52 2022 INFO: general_alerts.py: Started
+Sat Feb 12 15:49:52 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Sat Feb 12 15:49:52 2022 INFO: general_alerts.py: Processing overview data
+Sat Feb 12 15:49:53 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-11 was 530630 which is greater the 480000
+Sat Feb 12 15:49:53 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-11 was 75804 
+Sat Feb 12 15:49:53 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-10 was 7.19 which is greater than 6.00 
+Sat Feb 12 15:49:53 2022 INFO: general_alerts.py: Processing ltla data
+Sat Feb 12 15:49:54 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-10 was 1338 which is greater the 1000
+Sat Feb 12 15:49:55 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-10 was 2521 which is greater the 1000
+Sat Feb 12 15:49:55 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-10 was 1080 which is greater the 1000
+Sat Feb 12 15:49:56 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-10 was 1602 which is greater the 1000
+Sat Feb 12 15:49:58 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-10 was 1106 which is greater the 1000
+Sat Feb 12 15:49:59 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-10 was 1020 which is greater the 1000
+Sat Feb 12 15:49:59 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-10 was 1061 which is greater the 1000
+Sat Feb 12 15:50:00 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 85
+Sat Feb 12 15:50:01 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 385
+Sat Feb 12 15:50:01 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Sat Feb 12 15:50:02 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 288
+Sat Feb 12 15:50:03 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Sat Feb 12 15:50:03 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 240
+Sat Feb 12 15:50:03 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-11 was 9 which is greater the 5
+Sat Feb 12 15:50:04 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 249
+Sat Feb 12 15:50:05 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 152
+Sat Feb 12 15:50:05 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Sat Feb 12 15:50:05 2022 INFO: general_alerts.py: Completed
+Tue Feb 15 13:24:48 2022 INFO: general_alerts.py: Started
+Tue Feb 15 13:24:48 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Tue Feb 15 13:24:48 2022 INFO: general_alerts.py: Processing overview data
+Tue Feb 15 13:24:49 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-14 was 481397 which is greater the 480000
+Tue Feb 15 13:24:49 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-14 was 68771 
+Tue Feb 15 13:24:49 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-13 was 6.92 which is greater than 6.00 
+Tue Feb 15 13:24:49 2022 INFO: general_alerts.py: Processing ltla data
+Tue Feb 15 13:24:50 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-13 was 1246 which is greater the 1000
+Tue Feb 15 13:24:51 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-13 was 2272 which is greater the 1000
+Tue Feb 15 13:24:52 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-13 was 1475 which is greater the 1000
+Tue Feb 15 13:24:53 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-13 was 1028 which is greater the 1000
+Tue Feb 15 13:24:55 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 86
+Tue Feb 15 13:24:55 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 385
+Tue Feb 15 13:24:56 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Tue Feb 15 13:24:56 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 290
+Tue Feb 15 13:24:57 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Tue Feb 15 13:24:57 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 240
+Tue Feb 15 13:24:57 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-14 was 7 which is greater the 5
+Tue Feb 15 13:24:58 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Tue Feb 15 13:24:59 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Tue Feb 15 13:24:59 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 224
+Tue Feb 15 13:24:59 2022 INFO: general_alerts.py: Completed
+Wed Feb 16 11:44:06 2022 INFO: general_alerts.py: Started
+Wed Feb 16 11:44:06 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 16 11:44:06 2022 INFO: general_alerts.py: Processing overview data
+Wed Feb 16 11:44:07 2022 WARNING: general_alerts.py: The increase in rolling positive test rate on 2022-02-14 was 0.27 which is greater than 0.02
+Wed Feb 16 11:44:07 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-14 was 6.96 which is greater than 6.00 
+Wed Feb 16 11:44:07 2022 INFO: general_alerts.py: Processing ltla data
+Wed Feb 16 11:44:08 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-14 was 1134 which is greater the 1000
+Wed Feb 16 11:44:09 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-14 was 1994 which is greater the 1000
+Wed Feb 16 11:44:11 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-14 was 1367 which is greater the 1000
+Wed Feb 16 11:44:13 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 86
+Wed Feb 16 11:44:14 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 386
+Wed Feb 16 11:44:14 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 457
+Wed Feb 16 11:44:15 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 290
+Wed Feb 16 11:44:15 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 236
+Wed Feb 16 11:44:16 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 241
+Wed Feb 16 11:44:17 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 250
+Wed Feb 16 11:44:17 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Wed Feb 16 11:44:18 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 224
+Wed Feb 16 11:44:18 2022 INFO: general_alerts.py: Completed
+Thu Feb 17 12:55:20 2022 INFO: general_alerts.py: Started
+Thu Feb 17 12:55:20 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 17 12:55:20 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 17 12:55:21 2022 WARNING: general_alerts.py: The increase in rolling positive test rate on 2022-02-15 was 0.64 which is greater than 0.02
+Thu Feb 17 12:55:21 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-15 was 6.86 which is greater than 6.00 
+Thu Feb 17 12:55:21 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 17 12:55:22 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-15 was 1102 which is greater the 1000
+Thu Feb 17 12:55:23 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-15 was 1941 which is greater the 1000
+Thu Feb 17 12:55:25 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-15 was 1308 which is greater the 1000
+Thu Feb 17 12:55:27 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 88
+Thu Feb 17 12:55:28 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 387
+Thu Feb 17 12:55:28 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 457
+Thu Feb 17 12:55:29 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 290
+Thu Feb 17 12:55:29 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 237
+Thu Feb 17 12:55:30 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 241
+Thu Feb 17 12:55:31 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 252
+Thu Feb 17 12:55:31 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 17 12:55:32 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 224
+Thu Feb 17 12:55:32 2022 INFO: general_alerts.py: Completed
+Fri Feb 18 15:08:08 2022 INFO: general_alerts.py: Started
+Fri Feb 18 15:08:08 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Fri Feb 18 15:08:08 2022 INFO: general_alerts.py: Processing overview data
+Fri Feb 18 15:08:09 2022 WARNING: general_alerts.py: The increase in rolling positive test rate on 2022-02-16 was 0.83 which is greater than 0.02
+Fri Feb 18 15:08:09 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-16 was 6.88 which is greater than 6.00 
+Fri Feb 18 15:08:09 2022 INFO: general_alerts.py: Processing ltla data
+Fri Feb 18 15:08:11 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-16 was 1088 which is greater the 1000
+Fri Feb 18 15:08:11 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-16 was 1870 which is greater the 1000
+Fri Feb 18 15:08:13 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-16 was 1279 which is greater the 1000
+Fri Feb 18 15:08:16 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 87
+Fri Feb 18 15:08:17 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 390
+Fri Feb 18 15:08:17 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Fri Feb 18 15:08:18 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 292
+Fri Feb 18 15:08:19 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 237
+Fri Feb 18 15:08:19 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 241
+Fri Feb 18 15:08:20 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 252
+Fri Feb 18 15:08:20 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Fri Feb 18 15:08:21 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Fri Feb 18 15:08:21 2022 INFO: general_alerts.py: Completed
+Sun Feb 20 14:49:32 2022 INFO: general_alerts.py: Started
+Sun Feb 20 14:49:32 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Sun Feb 20 14:49:32 2022 INFO: general_alerts.py: Processing overview data
+Sun Feb 20 14:49:33 2022 INFO: general_alerts.py: Processing ltla data
+Sun Feb 20 14:49:34 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-18 was 1061 which is greater the 1000
+Sun Feb 20 14:49:35 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-18 was 1801 which is greater the 1000
+Sun Feb 20 14:49:37 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-18 was 1210 which is greater the 1000
+Sun Feb 20 14:49:40 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 88
+Sun Feb 20 14:49:40 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 390
+Sun Feb 20 14:49:41 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 456
+Sun Feb 20 14:49:41 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Sun Feb 20 14:49:42 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 237
+Sun Feb 20 14:49:43 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 242
+Sun Feb 20 14:49:43 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 252
+Sun Feb 20 14:49:44 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Sun Feb 20 14:49:44 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Sun Feb 20 14:49:44 2022 INFO: general_alerts.py: Completed
+Wed Feb 23 14:22:04 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:22:04 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:22:04 2022 INFO: general_alerts.py: Processing overview data
+Wed Feb 23 14:22:05 2022 INFO: general_alerts.py: Processing ltla data
+Wed Feb 23 14:22:07 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-21 was 1639 which is greater the 1000
+Wed Feb 23 14:22:09 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-21 was 1018 which is greater the 1000
+Wed Feb 23 14:22:11 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 87
+Wed Feb 23 14:22:12 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 389
+Wed Feb 23 14:22:12 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 457
+Wed Feb 23 14:22:13 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Wed Feb 23 14:22:14 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 239
+Wed Feb 23 14:22:14 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 242
+Wed Feb 23 14:22:15 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 253
+Wed Feb 23 14:22:15 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Wed Feb 23 14:22:16 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 226
+Wed Feb 23 14:22:16 2022 INFO: general_alerts.py: Completed
+Wed Feb 23 14:25:09 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:25:09 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:25:09 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Wed Feb 23 14:25:15 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:25:15 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:25:15 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Wed Feb 23 14:25:55 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:25:55 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:25:55 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Wed Feb 23 14:26:13 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:26:13 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:26:13 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Wed Feb 23 14:26:36 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:26:36 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:26:36 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Wed Feb 23 14:28:04 2022 INFO: general_alerts.py: Started
+Wed Feb 23 14:28:04 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Wed Feb 23 14:28:04 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:38:35 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:38:35 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:38:35 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:39:54 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:39:54 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:39:54 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:41:22 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:41:22 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:41:22 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:41:57 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:41:57 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:41:57 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 13:41:58 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 3500
+Thu Feb 24 13:41:58 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 13:41:58 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 10
+Thu Feb 24 13:41:58 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 13:41:58 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 0.60 
+Thu Feb 24 13:41:58 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 13:41:58 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-22 was 410 which is greater the 3
+Thu Feb 24 13:41:59 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 3
+Thu Feb 24 13:41:59 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 3
+Thu Feb 24 13:42:00 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 3
+Thu Feb 24 13:42:01 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-22 was 483 which is greater the 3
+Thu Feb 24 13:42:01 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 3
+Thu Feb 24 13:42:02 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 3
+Thu Feb 24 13:42:03 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 3
+Thu Feb 24 13:42:03 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 3
+Thu Feb 24 13:42:04 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 13:42:04 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:42:04 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 13:42:04 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-23 was 4 which is greater the 0
+Thu Feb 24 13:42:05 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 13:42:05 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:42:05 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 13:42:05 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:42:06 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 13:42:06 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:42:06 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:42:07 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 13:42:07 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:42:07 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 13:42:07 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:42:08 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 13:42:09 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 13:42:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:42:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:42:09 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 13:43:39 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:43:39 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:43:39 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 13:43:39 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 13:43:41 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 1000
+Thu Feb 24 13:43:45 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 13:43:45 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 13:43:46 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 13:43:47 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 13:43:47 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 13:43:48 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 13:43:48 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 13:43:49 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 13:43:49 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 13:43:49 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 13:47:03 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:47:03 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:47:03 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 13:47:03 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 13:47:05 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 1000
+Thu Feb 24 13:47:09 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 13:47:10 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 13:47:10 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 13:47:11 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 13:47:11 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 13:47:12 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 13:47:13 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 13:47:13 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 13:47:14 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 13:47:14 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 13:48:15 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:48:15 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:48:15 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:51:02 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:51:02 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:51:02 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:52:56 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:52:56 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:52:56 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:53:24 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:53:24 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:53:24 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:53:59 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:53:59 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:53:59 2022 ERROR: general_alerts.py: Could not open configuration file H:\projects\covid_alerts\config\general_alerts.csv
+Thu Feb 24 13:55:34 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:55:34 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:55:34 2022 ERROR: general_alerts.py: Could not open configuration file H:\projects\covid_alerts\config\general_alerts.csv
+Thu Feb 24 13:56:03 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:56:03 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:56:03 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 13:56:04 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 3500
+Thu Feb 24 13:56:04 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 13:56:04 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 10
+Thu Feb 24 13:56:04 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 13:56:04 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 0.60 
+Thu Feb 24 13:56:04 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 13:56:04 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-22 was 410 which is greater the 3
+Thu Feb 24 13:56:05 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 3
+Thu Feb 24 13:56:05 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 3
+Thu Feb 24 13:56:06 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 3
+Thu Feb 24 13:56:07 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-22 was 483 which is greater the 3
+Thu Feb 24 13:56:07 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 3
+Thu Feb 24 13:56:08 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 3
+Thu Feb 24 13:56:08 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 3
+Thu Feb 24 13:56:09 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 3
+Thu Feb 24 13:56:09 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 13:56:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:56:09 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 13:56:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-23 was 4 which is greater the 0
+Thu Feb 24 13:56:10 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 13:56:10 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:56:10 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 13:56:10 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:56:11 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 13:56:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:56:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:56:11 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 13:56:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:56:12 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 13:56:12 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:56:12 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 13:56:13 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 13:56:13 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:56:13 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:56:13 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 13:57:21 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:57:21 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:57:21 2022 ERROR: general_alerts.py: line 1 of configuration file H:\projects\covid_alerts\config\general_alerts.csv contains an area name of 0 length
+Thu Feb 24 13:58:20 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:58:20 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:58:20 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 13:58:21 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 3500
+Thu Feb 24 13:58:21 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 13:58:21 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 10
+Thu Feb 24 13:58:21 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 13:58:21 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 0.60 
+Thu Feb 24 13:58:21 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 13:58:21 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-22 was 410 which is greater the 3
+Thu Feb 24 13:58:22 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 3
+Thu Feb 24 13:58:23 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 3
+Thu Feb 24 13:58:23 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 3
+Thu Feb 24 13:58:24 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-22 was 483 which is greater the 3
+Thu Feb 24 13:58:24 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 3
+Thu Feb 24 13:58:25 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 3
+Thu Feb 24 13:58:25 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 3
+Thu Feb 24 13:58:26 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 3
+Thu Feb 24 13:58:27 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 13:58:27 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:58:27 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 13:58:27 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-23 was 4 which is greater the 0
+Thu Feb 24 13:58:28 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 13:58:28 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:58:29 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 13:58:29 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:58:29 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 13:58:29 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:58:29 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:58:30 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 13:58:30 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:58:31 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 13:58:31 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:58:32 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 13:58:32 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 13:58:32 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:58:32 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:58:32 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 13:58:58 2022 INFO: general_alerts.py: Started
+Thu Feb 24 13:58:58 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 13:58:58 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 13:58:58 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 3500
+Thu Feb 24 13:58:58 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 13:58:58 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 10
+Thu Feb 24 13:58:58 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 13:58:58 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 5.00 
+Thu Feb 24 13:58:58 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 13:58:59 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-22 was 410 which is greater the 3
+Thu Feb 24 13:58:59 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 3
+Thu Feb 24 13:59:00 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 3
+Thu Feb 24 13:59:00 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 3
+Thu Feb 24 13:59:01 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-22 was 483 which is greater the 3
+Thu Feb 24 13:59:01 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 3
+Thu Feb 24 13:59:02 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 3
+Thu Feb 24 13:59:02 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 3
+Thu Feb 24 13:59:03 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 3
+Thu Feb 24 13:59:04 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 13:59:04 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:59:04 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 13:59:04 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-23 was 4 which is greater the 0
+Thu Feb 24 13:59:05 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 13:59:05 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:59:05 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 13:59:05 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:59:05 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 13:59:05 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:59:05 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 13:59:06 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 13:59:06 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:59:06 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 13:59:06 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 13:59:07 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 13:59:07 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 13:59:07 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 13:59:07 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 13:59:07 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 14:00:04 2022 INFO: general_alerts.py: Started
+Thu Feb 24 14:00:04 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 14:00:04 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 14:00:04 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 280000
+Thu Feb 24 14:00:04 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 14:00:04 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 900
+Thu Feb 24 14:00:04 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 14:00:04 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 5.00 
+Thu Feb 24 14:00:04 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 14:00:05 2022 WARNING: general_alerts.py: The rolling number of cases for Adur on 2022-02-22 was 410 which is greater the 3
+Thu Feb 24 14:00:05 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 3
+Thu Feb 24 14:00:06 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 3
+Thu Feb 24 14:00:06 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 3
+Thu Feb 24 14:00:07 2022 WARNING: general_alerts.py: The rolling number of cases for Crawley on 2022-02-22 was 483 which is greater the 3
+Thu Feb 24 14:00:07 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 3
+Thu Feb 24 14:00:08 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 3
+Thu Feb 24 14:00:08 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 3
+Thu Feb 24 14:00:09 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 3
+Thu Feb 24 14:00:09 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 14:00:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Adur on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 14:00:09 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 14:00:09 2022 WARNING: general_alerts.py: The rolling number of deaths for Arun on 2022-02-23 was 4 which is greater the 0
+Thu Feb 24 14:00:10 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 14:00:10 2022 WARNING: general_alerts.py: The rolling number of deaths for Brighton and Hove on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 14:00:11 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 14:00:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Chichester on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 14:00:11 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 14:00:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 14:00:11 2022 WARNING: general_alerts.py: The rolling number of deaths for Crawley on 2022-02-23 was 3 which is greater the 0
+Thu Feb 24 14:00:12 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 14:00:12 2022 WARNING: general_alerts.py: The rolling number of deaths for Horsham on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 14:00:12 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 14:00:12 2022 WARNING: general_alerts.py: The rolling number of deaths for Norwich on 2022-02-23 was 2 which is greater the 0
+Thu Feb 24 14:00:13 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 14:00:13 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 14:00:13 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 increased by 2 which is greater than 0
+Thu Feb 24 14:00:13 2022 WARNING: general_alerts.py: The rolling number of deaths for Worthing on 2022-02-23 was 1 which is greater the 0
+Thu Feb 24 14:00:13 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 14:03:50 2022 INFO: general_alerts.py: Started
+Thu Feb 24 14:03:50 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 14:03:50 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 14:03:50 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 280000
+Thu Feb 24 14:03:50 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 14:03:50 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 900
+Thu Feb 24 14:03:50 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 14:03:50 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 5.00 
+Thu Feb 24 14:03:50 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 14:03:52 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 600
+Thu Feb 24 14:03:52 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 600
+Thu Feb 24 14:03:53 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 600
+Thu Feb 24 14:03:54 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 600
+Thu Feb 24 14:03:54 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 600
+Thu Feb 24 14:03:55 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 600
+Thu Feb 24 14:03:55 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 600
+Thu Feb 24 14:03:56 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 14:03:56 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 14:03:57 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 14:03:57 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 14:03:58 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 14:03:58 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 14:03:59 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 14:03:59 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 14:04:00 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 14:04:00 2022 INFO: general_alerts.py: Completed
+Thu Feb 24 14:06:37 2022 INFO: general_alerts.py: Started
+Thu Feb 24 14:06:37 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Thu Feb 24 14:06:37 2022 INFO: general_alerts.py: Processing overview data
+Thu Feb 24 14:06:38 2022 WARNING: general_alerts.py: The rolling number of cases for the UK on 2022-02-23 was 286977 which is greater the 280000
+Thu Feb 24 14:06:38 2022 INFO: general_alerts.py: The average daily case rate in the UK on 2022-02-23 was 40996 
+Thu Feb 24 14:06:38 2022 WARNING: general_alerts.py: The rolling number of deaths on 2022-02-23 was 941 which is greater than 900
+Thu Feb 24 14:06:38 2022 WARNING: general_alerts.py: The average daily death rate on 2022-02-23 was 134 
+Thu Feb 24 14:06:38 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-22 was 5.36 which is greater than 5.00 
+Thu Feb 24 14:06:38 2022 INFO: general_alerts.py: Processing ltla data
+Thu Feb 24 14:06:39 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-22 was 885 which is greater the 600
+Thu Feb 24 14:06:39 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-22 was 1569 which is greater the 600
+Thu Feb 24 14:06:40 2022 WARNING: general_alerts.py: The rolling number of cases for Chichester on 2022-02-22 was 607 which is greater the 600
+Thu Feb 24 14:06:41 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-22 was 922 which is greater the 600
+Thu Feb 24 14:06:41 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-22 was 911 which is greater the 600
+Thu Feb 24 14:06:42 2022 WARNING: general_alerts.py: The rolling number of cases for Vale of White Horse on 2022-02-22 was 656 which is greater the 600
+Thu Feb 24 14:06:43 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-22 was 735 which is greater the 600
+Thu Feb 24 14:06:43 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 89
+Thu Feb 24 14:06:43 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Thu Feb 24 14:06:44 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Thu Feb 24 14:06:45 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Thu Feb 24 14:06:45 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Thu Feb 24 14:06:46 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Thu Feb 24 14:06:47 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 254
+Thu Feb 24 14:06:47 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Thu Feb 24 14:06:48 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 225
+Thu Feb 24 14:06:48 2022 INFO: general_alerts.py: Completed
+Fri Feb 25 10:35:19 2022 INFO: general_alerts.py: Started
+Fri Feb 25 10:35:19 2022 INFO: general_alerts.py: Reading configuration file H:\projects\covid_alerts\config\general_alerts.csv 
+Fri Feb 25 10:35:19 2022 INFO: general_alerts.py: Processing overview data
+Fri Feb 25 10:35:20 2022 WARNING: general_alerts.py: The rolling positive test rate on 2022-02-23 was 5.31 which is greater than 5.00 
+Fri Feb 25 10:35:20 2022 INFO: general_alerts.py: Processing ltla data
+Fri Feb 25 10:35:22 2022 WARNING: general_alerts.py: The rolling number of cases for Arun on 2022-02-23 was 835 which is greater the 600
+Fri Feb 25 10:35:22 2022 WARNING: general_alerts.py: The rolling number of cases for Brighton and Hove on 2022-02-23 was 1480 which is greater the 600
+Fri Feb 25 10:35:24 2022 WARNING: general_alerts.py: The rolling number of cases for Horsham on 2022-02-23 was 854 which is greater the 600
+Fri Feb 25 10:35:25 2022 WARNING: general_alerts.py: The rolling number of cases for Norwich on 2022-02-23 was 840 which is greater the 600
+Fri Feb 25 10:35:26 2022 WARNING: general_alerts.py: The rolling number of cases for Worthing on 2022-02-23 was 657 which is greater the 600
+Fri Feb 25 10:35:27 2022 INFO: general_alerts.py: The total number of deaths for Adur is now 88
+Fri Feb 25 10:35:27 2022 INFO: general_alerts.py: The total number of deaths for Arun is now 391
+Fri Feb 25 10:35:28 2022 INFO: general_alerts.py: The total number of deaths for Brighton and Hove is now 458
+Fri Feb 25 10:35:28 2022 INFO: general_alerts.py: The total number of deaths for Chichester is now 293
+Fri Feb 25 10:35:29 2022 INFO: general_alerts.py: The total number of deaths for Crawley is now 240
+Fri Feb 25 10:35:30 2022 INFO: general_alerts.py: The total number of deaths for Horsham is now 243
+Fri Feb 25 10:35:30 2022 INFO: general_alerts.py: The total number of deaths for Norwich is now 253
+Fri Feb 25 10:35:31 2022 INFO: general_alerts.py: The total number of deaths for Vale of White Horse is now 154
+Fri Feb 25 10:35:31 2022 INFO: general_alerts.py: The total number of deaths for Worthing is now 226
+Fri Feb 25 10:35:31 2022 INFO: general_alerts.py: Completed
