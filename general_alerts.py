@@ -574,6 +574,17 @@ cumulativeValues['area'] = 'UK'
 # Retrieve overview data
 data_lines = RetreiveCOVIDData(overview_filter,overview_structure)
 
+# Remove lines with null death data.
+# Data issue 11-13/05/2022
+
+valid_data_start = 0
+for data_line in data_lines : 
+    data_list = data_line.split(',')
+    if ( len(data_list[overview_field_positions['Deaths']]) != 0 ) : break
+    valid_data_start += 1
+
+del data_lines[0:valid_data_start]
+
 # Extract data required to calculate rolling values
 data_lists = ReturnRollingSourceData(data_lines,Rolling)
 LastRollingDate = data_lists[len(data_lists)-1][overview_field_positions['Date']]
